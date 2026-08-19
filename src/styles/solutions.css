@@ -1,0 +1,623 @@
+/* =========================================================
+   AYAANSH T CORP — WHAT WE DO / SOLUTIONS PAGE
+   ========================================================= */
+
+.solutions-page {
+  background: var(--surface, #ffffff);
+  color: var(--text, #101828);
+}
+
+/* ---------------------------------------------------------
+   HERO
+   --------------------------------------------------------- */
+
+.solutions-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0 90px;
+  background:
+    radial-gradient(
+      circle at 82% 20%,
+      rgba(18, 100, 255, 0.16),
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      #071426 0%,
+      #0b1f38 55%,
+      #102d50 100%
+    );
+  color: #ffffff;
+}
+
+.solutions-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+  background-size: 48px 48px;
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    transparent
+  );
+}
+
+.solutions-hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+  gap: 80px;
+  align-items: center;
+}
+
+.solutions-hero-copy {
+  max-width: 760px;
+}
+
+.solutions-kicker {
+  margin-bottom: 18px;
+  color: var(--blue, #1264ff);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.solutions-kicker-light {
+  color: #68a1ff;
+}
+
+.solutions-hero h1 {
+  max-width: 820px;
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(48px, 6vw, 78px);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.98;
+}
+
+.solutions-hero-copy > p {
+  max-width: 700px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.solutions-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.solutions-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.solutions-button:hover {
+  transform: translateY(-2px);
+}
+
+.solutions-button-primary {
+  background: var(--blue, #1264ff);
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(18, 100, 255, 0.28);
+}
+
+.solutions-button-primary:hover {
+  background: var(--blue-dark, #0b4fd4);
+}
+
+.solutions-button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.solutions-button-secondary:hover {
+  background: rgba(255, 255, 255, 0.09);
+}
+
+/* ---------------------------------------------------------
+   HERO PANEL
+   --------------------------------------------------------- */
+
+.solutions-hero-panel {
+  position: relative;
+  min-height: 430px;
+  padding: 42px;
+  border: 1px solid rgba(116, 174, 255, 0.28);
+  border-radius: 24px;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(18, 100, 255, 0.14),
+      transparent 55%
+    ),
+    rgba(255, 255, 255, 0.035);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.025),
+    0 30px 80px rgba(0, 0, 0, 0.2);
+}
+
+.solutions-hero-panel::before,
+.solutions-hero-panel::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 1px solid rgba(100, 169, 255, 0.26);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.solutions-hero-panel::before {
+  width: 310px;
+  height: 310px;
+}
+
+.solutions-hero-panel::after {
+  width: 190px;
+  height: 190px;
+}
+
+.solutions-hero-panel-line {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 76px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.solutions-hero-panel-line:last-child {
+  border-bottom: 0;
+}
+
+.solutions-hero-panel-line strong {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.solutions-hero-panel-line span {
+  color: rgba(255, 255, 255, 0.58);
+  font-size: 14px;
+}
+
+/* ---------------------------------------------------------
+   GENERAL SECTIONS
+   --------------------------------------------------------- */
+
+.solutions-section {
+  padding: 105px 0;
+  background: #ffffff;
+}
+
+.solutions-section + .solutions-section {
+  border-top: 1px solid var(--border, #e4e7ec);
+}
+
+.solutions-section-heading {
+  max-width: 820px;
+  margin-bottom: 55px;
+}
+
+.solutions-section-heading h2 {
+  margin: 0;
+  color: var(--text, #101828);
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+}
+
+.solutions-section-heading p {
+  max-width: 760px;
+  margin: 22px 0 0;
+  color: var(--muted, #667085);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* ---------------------------------------------------------
+   SERVICE GRID
+   --------------------------------------------------------- */
+
+.solutions-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.solutions-service-card {
+  position: relative;
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid var(--border, #e4e7ec);
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.045);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.solutions-service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(18, 100, 255, 0.3);
+  box-shadow: 0 18px 42px rgba(16, 24, 40, 0.09);
+}
+
+.solutions-service-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  border-radius: 12px;
+  background: var(--blue-light, #eaf2ff);
+  color: var(--blue, #1264ff);
+}
+
+.solutions-service-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.solutions-service-content h3 {
+  margin: 0;
+  color: var(--text, #101828);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.solutions-service-content p {
+  margin: 14px 0 0;
+  color: var(--muted, #667085);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.solutions-service-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 25px;
+  color: var(--blue, #1264ff);
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.solutions-service-content a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------------------------------------------
+   PROCUREMENT
+   --------------------------------------------------------- */
+
+.solutions-procurement {
+  background: var(--surface-soft, #f7f9fc);
+}
+
+.solutions-procurement .solutions-service-card {
+  background: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   BUSINESS SERVICES
+   --------------------------------------------------------- */
+
+.solutions-business {
+  background: #ffffff;
+}
+
+.solutions-business-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+  border-top: 1px solid var(--border, #e4e7ec);
+}
+
+.solutions-business-row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 24px;
+  gap: 20px;
+  align-items: start;
+  padding: 32px 10px 32px 0;
+  border-bottom: 1px solid var(--border, #e4e7ec);
+}
+
+.solutions-business-row:nth-child(odd) {
+  padding-right: 35px;
+}
+
+.solutions-business-row:nth-child(even) {
+  padding-left: 35px;
+  border-left: 1px solid var(--border, #e4e7ec);
+}
+
+.solutions-business-row > span {
+  color: var(--blue, #1264ff);
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.solutions-business-row h3 {
+  margin: 0;
+  color: var(--text, #101828);
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.solutions-business-row p {
+  margin: 10px 0 0;
+  color: var(--muted, #667085);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.solutions-business-row > svg {
+  color: var(--blue, #1264ff);
+}
+
+/* ---------------------------------------------------------
+   DELIVERY / DARK SECTION
+   --------------------------------------------------------- */
+
+.solutions-delivery {
+  position: relative;
+  overflow: hidden;
+  padding: 105px 0;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(18, 100, 255, 0.2),
+      transparent 35%
+    ),
+    #071426;
+  color: #ffffff;
+}
+
+.solutions-delivery-heading {
+  max-width: 800px;
+  margin-bottom: 55px;
+}
+
+.solutions-delivery-heading h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+}
+
+.solutions-delivery-heading p {
+  max-width: 720px;
+  margin: 22px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+.solutions-delivery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.solutions-delivery-card {
+  min-height: 250px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.solutions-delivery-number {
+  margin-bottom: 55px;
+  color: #68a1ff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.solutions-delivery-card > svg {
+  margin-bottom: 22px;
+  color: #68a1ff;
+}
+
+.solutions-delivery-card h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.solutions-delivery-card p {
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------------------
+   CTA
+   --------------------------------------------------------- */
+
+.solutions-cta {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.solutions-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 55px 60px;
+  border-radius: 22px;
+  background: #eaf2ff;
+  border: 1px solid #d4e3ff;
+}
+
+.solutions-cta-inner h2 {
+  margin: 0;
+  color: var(--text, #101828);
+  font-size: clamp(36px, 4vw, 52px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.solutions-cta-inner p {
+  max-width: 720px;
+  margin: 18px 0 0;
+  color: var(--muted, #667085);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+  .solutions-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .solutions-hero-panel {
+    max-width: 700px;
+  }
+
+  .solutions-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .solutions-delivery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .solutions-hero {
+    padding: 75px 0 65px;
+  }
+
+  .solutions-hero h1 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .solutions-hero-panel {
+    min-height: 340px;
+    padding: 25px;
+  }
+
+  .solutions-hero-panel::before {
+    width: 240px;
+    height: 240px;
+  }
+
+  .solutions-hero-panel::after {
+    width: 145px;
+    height: 145px;
+  }
+
+  .solutions-section,
+  .solutions-delivery,
+  .solutions-cta {
+    padding: 75px 0;
+  }
+
+  .solutions-service-grid,
+  .solutions-delivery-grid,
+  .solutions-business-list {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-business-row,
+  .solutions-business-row:nth-child(odd),
+  .solutions-business-row:nth-child(even) {
+    padding: 25px 0;
+    border-left: 0;
+  }
+
+  .solutions-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 35px 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .solutions-hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .solutions-button {
+    width: 100%;
+  }
+
+  .solutions-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-service-card {
+    min-height: auto;
+  }
+
+  .solutions-delivery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solutions-business-row {
+    grid-template-columns: 48px minmax(0, 1fr) 20px;
+    gap: 12px;
+  }
+}

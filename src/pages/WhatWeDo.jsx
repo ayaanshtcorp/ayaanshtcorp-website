@@ -3,7 +3,7 @@ import {
   ArrowRight,
   Globe2,
   Code2,
-  MonitorSmartphone,
+  Smartphone,
   Workflow,
   Search,
   PackageSearch,
@@ -15,26 +15,38 @@ import {
   CheckCircle2,
 } from "lucide-react";
 
+import "../styles/solutions.css";
+
 const digitalServices = [
   {
     icon: Globe2,
-    title: "Corporate Websites",
-    text: "Professional websites designed to communicate your company, capabilities and value proposition clearly.",
+    title: "Web Development",
+    text: "Corporate websites and responsive digital experiences built around your business objectives.",
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile Applications",
+    text: "Mobile experiences designed to connect customers, teams and business workflows.",
   },
   {
     icon: Code2,
-    title: "Web Development",
-    text: "Modern responsive web experiences built around practical business requirements and long-term maintainability.",
-  },
-  {
-    icon: MonitorSmartphone,
-    title: "Website Modernization",
-    text: "Improve an existing website's structure, presentation, responsiveness and overall digital experience.",
+    title: "Custom Software",
+    text: "Business applications, portals and software designed around specific operational requirements.",
   },
   {
     icon: Workflow,
-    title: "Digital Automation",
-    text: "Identify repetitive digital processes and create practical workflows that reduce unnecessary manual effort.",
+    title: "Automation",
+    text: "Practical workflow automation that reduces repetitive work and connects business processes.",
+  },
+  {
+    icon: Building2,
+    title: "SaaS Solutions",
+    text: "Scalable software products designed for recurring use, operational efficiency and growth.",
+  },
+  {
+    icon: Search,
+    title: "SEO & Digital Growth",
+    text: "Digital visibility and optimization focused on attracting the right audience and opportunities.",
   },
 ];
 
@@ -42,7 +54,7 @@ const procurementServices = [
   {
     icon: Search,
     title: "RFQ Research",
-    text: "Research opportunities and identify requirements that align with a business's capabilities and target markets.",
+    text: "Research procurement opportunities and identify requirements aligned with business capabilities.",
   },
   {
     icon: PackageSearch,
@@ -64,15 +76,15 @@ const procurementServices = [
 const businessServices = [
   {
     title: "Digital Business Support",
-    text: "Practical assistance for businesses establishing, improving or managing their digital presence.",
+    text: "Focused assistance for businesses establishing, improving or managing their digital presence.",
   },
   {
     title: "Business Research",
-    text: "Structured research that helps identify suppliers, markets, opportunities and practical next steps.",
+    text: "Structured research covering suppliers, markets, opportunities and practical next steps.",
   },
   {
     title: "Process Support",
-    text: "Help organize repeatable workflows and operational requirements into clearer processes.",
+    text: "Organize recurring workflows and operational requirements into clearer, repeatable processes.",
   },
 ];
 
@@ -103,103 +115,147 @@ const deliverySteps = [
   },
 ];
 
+function ServiceCard({ service, dark = false }) {
+  const Icon = service.icon;
+
+  return (
+    <article
+      className={`solutions-service-card ${
+        dark ? "solutions-service-card-dark" : ""
+      }`}
+    >
+      <div className="solutions-service-icon">
+        <Icon size={22} />
+      </div>
+
+      <div className="solutions-service-content">
+        <h3>{service.title}</h3>
+
+        <p>{service.text}</p>
+      </div>
+
+      <a href="#/contact">
+        Discuss a requirement
+        <ArrowRight size={15} />
+      </a>
+    </article>
+  );
+}
+
 export default function WhatWeDo() {
   return (
-    <main className="inner-page what-we-do-page">
-
-      {/* PAGE HERO */}
-      <section className="inner-hero">
-        <div className="container inner-hero-inner">
-          <div>
-            <div className="section-kicker">
+    <main className="solutions-page">
+      <section className="solutions-hero">
+        <div className="container solutions-hero-inner">
+          <div className="solutions-hero-copy">
+            <div className="solutions-kicker">
               WHAT WE DO
             </div>
 
             <h1>
-              Capabilities built
-              <span>around execution.</span>
+              Technology and services
+              <span>built around execution.</span>
             </h1>
 
             <p>
-              Ayaansh T Corp combines digital solutions, procurement
-              support and practical business services to help
-              organizations move from requirement to delivery.
+              We combine digital development, automation,
+              procurement research and practical business
+              support to help organizations move from
+              requirement to delivery.
             </p>
+
+            <div className="solutions-hero-actions">
+              <a
+                href="#/contact"
+                className="solutions-button solutions-button-primary"
+              >
+                Start a Project
+                <ArrowRight size={16} />
+              </a>
+
+              <a
+                href="#digital-solutions"
+                className="solutions-button solutions-button-secondary"
+              >
+                Explore Capabilities
+              </a>
+            </div>
           </div>
 
-          <div className="inner-hero-side">
+          <div className="solutions-hero-panel">
             <span>OUR APPROACH</span>
 
-            <strong>
-              Understand.
-              <br />
-              Build.
-              <br />
-              Execute.
-            </strong>
+            <div className="solutions-hero-panel-line">
+              <strong>01</strong>
+              <div>
+                <b>Understand</b>
+                <small>Business requirement</small>
+              </div>
+            </div>
+
+            <div className="solutions-hero-panel-line">
+              <strong>02</strong>
+              <div>
+                <b>Build</b>
+                <small>Practical solution</small>
+              </div>
+            </div>
+
+            <div className="solutions-hero-panel-line">
+              <strong>03</strong>
+              <div>
+                <b>Execute</b>
+                <small>Clear delivery</small>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* DIGITAL SOLUTIONS */}
-      <section className="section capability-detail-section">
+      <section
+        className="solutions-section"
+        id="digital-solutions"
+      >
         <div className="container">
-
-          <div className="detail-heading">
+          <div className="solutions-section-heading">
             <div>
-              <div className="section-kicker">
+              <div className="solutions-kicker">
                 01 / DIGITAL SOLUTIONS
               </div>
 
               <h2>
-                Build a stronger
-                <span>digital presence.</span>
+                Digital capabilities
+                <span>for modern business.</span>
               </h2>
             </div>
 
             <p>
-              From a new corporate website to modernization of an
-              existing digital experience, we focus on clarity,
-              performance and business purpose.
+              From a new digital presence to custom
+              applications and automation, we focus on
+              solutions that serve a real business purpose.
             </p>
           </div>
 
-          <div className="detail-grid">
-            {digitalServices.map((service) => {
-              const Icon = service.icon;
-
-              return (
-                <article
-                  className="detail-card"
-                  key={service.title}
-                >
-                  <div className="detail-card-icon">
-                    <Icon size={22} />
-                  </div>
-
-                  <h3>{service.title}</h3>
-
-                  <p>{service.text}</p>
-
-                  <a href="#/contact">
-                    Discuss a requirement
-                    <ArrowRight size={15} />
-                  </a>
-                </article>
-              );
-            })}
+          <div className="solutions-service-grid">
+            {digitalServices.map((service) => (
+              <ServiceCard
+                service={service}
+                key={service.title}
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* PROCUREMENT */}
-      <section className="section capability-detail-section procurement-detail">
+      <section
+        className="solutions-section solutions-procurement"
+        id="procurement"
+      >
         <div className="container">
-
-          <div className="detail-heading">
+          <div className="solutions-section-heading">
             <div>
-              <div className="section-kicker">
-                02 / PROCUREMENT SUPPORT
+              <div className="solutions-kicker">
+                02 / PROCUREMENT
               </div>
 
               <h2>
@@ -209,47 +265,33 @@ export default function WhatWeDo() {
             </div>
 
             <p>
-              We provide practical RFQ research and sourcing support
-              for businesses evaluating public-sector and government
-              procurement opportunities.
+              Practical procurement research and supplier
+              sourcing support for businesses evaluating
+              applicable public-sector and government
+              opportunities.
             </p>
           </div>
 
-          <div className="detail-grid">
-            {procurementServices.map((service) => {
-              const Icon = service.icon;
-
-              return (
-                <article
-                  className="detail-card dark-detail-card"
-                  key={service.title}
-                >
-                  <div className="detail-card-icon">
-                    <Icon size={22} />
-                  </div>
-
-                  <h3>{service.title}</h3>
-
-                  <p>{service.text}</p>
-
-                  <a href="#/contact">
-                    Discuss a requirement
-                    <ArrowRight size={15} />
-                  </a>
-                </article>
-              );
-            })}
+          <div className="solutions-service-grid">
+            {procurementServices.map((service) => (
+              <ServiceCard
+                service={service}
+                dark
+                key={service.title}
+              />
+            ))}
           </div>
         </div>
       </section>
 
-      {/* BUSINESS SERVICES */}
-      <section className="section business-services-section">
+      <section
+        className="solutions-section solutions-business"
+        id="business-services"
+      >
         <div className="container">
-
-          <div className="detail-heading">
+          <div className="solutions-section-heading">
             <div>
-              <div className="section-kicker">
+              <div className="solutions-kicker">
                 03 / BUSINESS SERVICES
               </div>
 
@@ -260,63 +302,66 @@ export default function WhatWeDo() {
             </div>
 
             <p>
-              Not every requirement needs a large system or complex
-              engagement. Sometimes businesses need focused support
+              Not every requirement needs a large system.
+              Sometimes businesses need focused support
               that simply gets the work done.
             </p>
           </div>
 
-          <div className="business-service-list">
+          <div className="solutions-business-list">
             {businessServices.map((service, index) => (
-              <article
-                className="business-service-row"
+              <a
+                href="#/contact"
+                className="solutions-business-row"
                 key={service.title}
               >
                 <span>
                   {String(index + 1).padStart(2, "0")}
                 </span>
 
-                <h3>{service.title}</h3>
+                <div>
+                  <h3>{service.title}</h3>
+                  <p>{service.text}</p>
+                </div>
 
-                <p>{service.text}</p>
-
-                <ArrowRight size={18} />
-              </article>
+                <ArrowRight size={19} />
+              </a>
             ))}
           </div>
         </div>
       </section>
 
-      {/* HOW WE DELIVER */}
-      <section className="delivery-section">
+      <section className="solutions-delivery">
         <div className="container">
+          <div className="solutions-delivery-heading">
+            <div>
+              <div className="solutions-kicker solutions-kicker-light">
+                HOW WE DELIVER
+              </div>
 
-          <div className="delivery-heading">
-            <div className="section-kicker light-kicker">
-              HOW WE DELIVER
+              <h2>
+                A straightforward
+                <span>way of working.</span>
+              </h2>
             </div>
 
-            <h2>
-              A straightforward
-              <span>way of working.</span>
-            </h2>
-
             <p>
-              We keep the process focused so that the work can move
-              forward without unnecessary complexity.
+              We keep the process focused so that the
+              work can move forward without unnecessary
+              complexity.
             </p>
           </div>
 
-          <div className="delivery-grid">
+          <div className="solutions-delivery-grid">
             {deliverySteps.map((step) => {
               const Icon = step.icon;
 
               return (
                 <article
-                  className="delivery-card"
+                  className="solutions-delivery-card"
                   key={step.number}
                 >
-                  <div className="delivery-number">
+                  <div className="solutions-delivery-number">
                     {step.number}
                   </div>
 
@@ -332,11 +377,10 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="page-cta">
-        <div className="container page-cta-inner">
+      <section className="solutions-cta">
+        <div className="container solutions-cta-inner">
           <div>
-            <div className="section-kicker">
+            <div className="solutions-kicker">
               HAVE A REQUIREMENT?
             </div>
 
@@ -346,21 +390,21 @@ export default function WhatWeDo() {
             </h2>
 
             <p>
-              Tell us what you're trying to accomplish and we'll
-              discuss the most practical approach.
+              Tell us what you're trying to accomplish
+              and we'll discuss the most practical
+              approach.
             </p>
           </div>
 
           <a
             href="#/contact"
-            className="corporate-button primary large"
+            className="solutions-button solutions-button-primary"
           >
             Start a Conversation
             <ArrowRight size={17} />
           </a>
         </div>
       </section>
-
     </main>
   );
 }
