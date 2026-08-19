@@ -1,0 +1,66 @@
+/* =====================================================
+   SOCIAL NETWORKS
+===================================================== */
+
+.footer-social {
+  margin-top: 24px;
+}
+
+.footer-social-label {
+  display: block;
+  margin-bottom: 12px;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.footer-social-link {
+  width: 36px;
+  height: 36px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #304257;
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.03);
+  color: #b8c5d4;
+
+  transition:
+    color 180ms ease,
+    background 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.footer-social-link:hover {
+  border-color: #1264ff;
+  background: #1264ff;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.footer-social-x {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+@media (max-width: 700px) {
+  .footer-social {
+    margin-top: 20px;
+  }
+
+  .footer-social-links {
+    gap: 8px;
+  }
+}

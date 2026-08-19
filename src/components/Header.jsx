@@ -17,39 +17,90 @@ import {
 } from "lucide-react";
 
 const technologyItems = [
-  { label: "Web Development", icon: Globe2, href: "#/what-we-do" },
-  { label: "Mobile Applications", icon: Smartphone, href: "#/what-we-do" },
-  { label: "SaaS", icon: Cloud, href: "#/what-we-do" },
-  { label: "Custom Software", icon: Code2, href: "#/what-we-do" },
-  { label: "Automation", icon: Workflow, href: "#/what-we-do" },
-  { label: "SEO & Digital Growth", icon: Search, href: "#/what-we-do" },
+  {
+    label: "Web Development",
+    icon: Globe2,
+    href: "#/what-we-do",
+  },
+  {
+    label: "Mobile Applications",
+    icon: Smartphone,
+    href: "#/what-we-do",
+  },
+  {
+    label: "SaaS",
+    icon: Cloud,
+    href: "#/what-we-do",
+  },
+  {
+    label: "Custom Software",
+    icon: Code2,
+    href: "#/what-we-do",
+  },
+  {
+    label: "Automation",
+    icon: Workflow,
+    href: "#/what-we-do",
+  },
+  {
+    label: "SEO & Digital Growth",
+    icon: Search,
+    href: "#/what-we-do",
+  },
 ];
 
 const productItems = [
-  { label: "Leaf Alchemy", icon: Leaf, href: "#/products" },
-  { label: "Products & Ventures", icon: Cloud, href: "#/products" },
+  {
+    label: "Leaf Alchemy",
+    icon: Leaf,
+    href: "#/products",
+  },
+  {
+    label: "Products & Ventures",
+    icon: Cloud,
+    href: "#/products",
+  },
 ];
 
 const procurementItems = [
-  { label: "RFQ Research", icon: FileSearch, href: "#/procurement" },
-  { label: "Supplier Sourcing", icon: Users, href: "#/procurement" },
-  { label: "Quote Support", icon: Quote, href: "#/procurement" },
+  {
+    label: "RFQ Research",
+    icon: FileSearch,
+    href: "#/what-we-do",
+  },
+  {
+    label: "Supplier Sourcing",
+    icon: Users,
+    href: "#/what-we-do",
+  },
+  {
+    label: "Quote Support",
+    icon: Quote,
+    href: "#/what-we-do",
+  },
 ];
 
 function Dropdown({ items, onNavigate }) {
   return (
     <div className="at-nav-dropdown">
       {items.map(({ label, icon: Icon, href }) => (
-        <a key={label} href={href} onClick={onNavigate}>
+        <a
+          key={label}
+          href={href}
+          onClick={onNavigate}
+        >
           <span className="at-nav-dropdown-icon">
             <Icon size={16} />
           </span>
 
-          <span>
-            <strong>{label}</strong>
+          <span className="at-nav-dropdown-label">
+            {label}
           </span>
 
-          <ArrowRight size={14} className="at-nav-arrow" />
+          <ArrowRight
+            size={14}
+            className="at-nav-arrow"
+          />
         </a>
       ))}
     </div>
@@ -66,14 +117,18 @@ export default function Header() {
   };
 
   const toggleMenu = (menu) => {
-    setActiveMenu((current) => (current === menu ? null : menu));
+    setActiveMenu((current) =>
+      current === menu ? null : menu
+    );
   };
 
   return (
     <header
       className="at-global-header"
       onMouseLeave={() => {
-        if (!mobileOpen) setActiveMenu(null);
+        if (!mobileOpen) {
+          setActiveMenu(null);
+        }
       }}
     >
       <div className="at-container at-global-header-inner">
@@ -91,7 +146,7 @@ export default function Header() {
           />
         </a>
 
-        {/* MOBILE TOGGLE */}
+        {/* MOBILE MENU BUTTON */}
         <button
           type="button"
           className="at-global-mobile-toggle"
@@ -99,10 +154,18 @@ export default function Header() {
             setMobileOpen((current) => !current);
             setActiveMenu(null);
           }}
-          aria-label={mobileOpen ? "Close navigation" : "Open navigation"}
+          aria-label={
+            mobileOpen
+              ? "Close navigation"
+              : "Open navigation"
+          }
           aria-expanded={mobileOpen}
         >
-          {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          {mobileOpen ? (
+            <X size={22} />
+          ) : (
+            <Menu size={22} />
+          )}
         </button>
 
         {/* NAVIGATION */}
@@ -118,16 +181,21 @@ export default function Header() {
           <div
             className="at-global-nav-item"
             onMouseEnter={() => {
-              if (!mobileOpen) setActiveMenu("technology");
+              if (!mobileOpen) {
+                setActiveMenu("technology");
+              }
             }}
           >
             <button
               type="button"
               className="at-global-nav-trigger"
               onClick={() => toggleMenu("technology")}
-              aria-expanded={activeMenu === "technology"}
+              aria-expanded={
+                activeMenu === "technology"
+              }
             >
               Technology Solutions
+
               <ChevronDown
                 size={14}
                 className={
@@ -148,7 +216,7 @@ export default function Header() {
 
           {/* HOW WE WORK */}
           <a
-            href="#/how-we-work"
+            href="#/who-we-are"
             className="at-global-nav-link"
             onClick={closeMenus}
           >
@@ -168,16 +236,21 @@ export default function Header() {
           <div
             className="at-global-nav-item"
             onMouseEnter={() => {
-              if (!mobileOpen) setActiveMenu("products");
+              if (!mobileOpen) {
+                setActiveMenu("products");
+              }
             }}
           >
             <button
               type="button"
               className="at-global-nav-trigger"
               onClick={() => toggleMenu("products")}
-              aria-expanded={activeMenu === "products"}
+              aria-expanded={
+                activeMenu === "products"
+              }
             >
               Products & Ventures
+
               <ChevronDown
                 size={14}
                 className={
@@ -200,16 +273,23 @@ export default function Header() {
           <div
             className="at-global-nav-item"
             onMouseEnter={() => {
-              if (!mobileOpen) setActiveMenu("procurement");
+              if (!mobileOpen) {
+                setActiveMenu("procurement");
+              }
             }}
           >
             <button
               type="button"
               className="at-global-nav-trigger"
-              onClick={() => toggleMenu("procurement")}
-              aria-expanded={activeMenu === "procurement"}
+              onClick={() =>
+                toggleMenu("procurement")
+              }
+              aria-expanded={
+                activeMenu === "procurement"
+              }
             >
               Procurement
+
               <ChevronDown
                 size={14}
                 className={

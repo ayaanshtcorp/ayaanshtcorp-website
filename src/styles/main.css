@@ -1,0 +1,26 @@
+/* =====================================================
+   AYAANSH T CORP — GLOBAL CSS ENTRY
+===================================================== */
+
+@import "./variables.css";
+@import "./reset.css";
+@import "./typography.css";
+@import "./utilities.css";
+
+@import "./animations.css";
+@import "./buttons.css";
+@import "./cards.css";
+@import "./forms.css";
+
+@import "./header.css";
+@import "./footer.css";
+
+/* Page styles */
+@import "./home.css";
+@import "./solutions.css";
+@import "./methodology.css";
+@import "./work.css";
+@import "./products.css";
+@import "./procurement.css";
+@import "./insights.css";
+@import "./contact.css";
