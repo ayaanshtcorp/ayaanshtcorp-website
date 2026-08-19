@@ -83,12 +83,12 @@ img {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: #FFFFFF;
+  background: #06101d;
   border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
 
 .header-inner {
-  min-height: 64px;
+  min-height: 72px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -128,7 +128,7 @@ img {
   padding: 0 14px;
   border: 0;
   background: transparent;
-  color: #101828;
+  color: #d4dfeb;
   font-size: 14px;
   font-weight: 650;
   white-space: nowrap;
@@ -1064,85 +1064,25 @@ img {
 /* =========================================================
    FOOTER
 ========================================================= */
-
-.site-footer {
-  background: #FFFFFF;
-  color: #ffffff;
-  padding: 70px 0 24px;
-}
-
-.footer-main {
-  display: grid;
-  grid-template-columns: 1.5fr repeat(4, 0.75fr);
-  gap: 50px;
-  padding-bottom: 65px;
-}
-
-.footer-company {
-  min-width: 0;
-}
-
-.footer-logo-link {
-  display: inline-flex;
-  margin-bottom: 20px;
-}
-
-.footer-logo {
-  width: 175px;
-  height: auto;
-}
-
-.footer-company p {
-  max-width: 310px;
-  margin: 0 0 18px;
-  color: #8fa2b8;
-  font-size: 13px;
-  line-height: 1.7;
-}
-
-.footer-email {
-  color: #63b5ff;
-  font-size: 13px;
-  font-weight: 650;
-}
-
-.footer-column {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 11px;
-}
-
-.footer-column h4 {
-  margin: 4px 0 10px;
-  color: #ffffff;
-  font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-}
-
-.footer-column a {
-  color: #8fa2b8;
-  font-size: 13px;
-  transition: color 0.2s ease;
-}
-
-.footer-column a:hover {
-  color: #ffffff;
-}
-
 .footer-bottom {
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.10);
-  color: #7f93aa;
-  font-size: 11px;
-}
 
+  padding-top: 20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+  color: #7f93aa;
+
+  font-size: 11px;
+
+}
 /* =========================================================
    RESPONSIVE
 ========================================================= */
@@ -1189,11 +1129,18 @@ img {
 
   .mobile-menu-button {
     display: grid;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: transparent;
+    color: #ffffff;
+    border-radius: 3px;
+    place-items: center;
   }
 
   .main-nav {
     position: absolute;
-    top: 64px;
+    top: 72px;
     left: 0;
     right: 0;
     display: none;
@@ -3414,24 +3361,5 @@ img {
 
   .contact-success .corporate-button {
     margin-left: 0;
-  }
-}
-.contact-form-error {
-  margin-top: 20px;
-  padding: 12px 15px;
-  border: 1px solid #f1b8b8;
-  background: #fff5f5;
-  color: #b42318;
-  font-size: 12px;
-  line-height: 1.5;
-}
-
-.form-spinner {
-  animation: contact-spin 0.8s linear infinite;
-}
-
-@keyframes contact-spin {
-  to {
-    transform: rotate(360deg);
   }
 }
