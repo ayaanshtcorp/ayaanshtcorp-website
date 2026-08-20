@@ -5,27 +5,7 @@ import {
   Clock3,
   Package,
   Sparkles,
-  TrendingUp,
-  ExternalLink,
 } from "lucide-react";
-
-const productPrinciples = [
-  {
-    icon: Sparkles,
-    title: "Build with purpose",
-    text: "Each venture begins with a clear product opportunity and a reason for existing.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Develop for growth",
-    text: "We build digital foundations that can evolve as products, customers and markets develop.",
-  },
-  {
-    icon: Package,
-    title: "Create real products",
-    text: "Our objective is to move beyond concepts and build products that can operate in the real market.",
-  },
-];
 
 export default function Products() {
   return (
@@ -34,20 +14,20 @@ export default function Products() {
       {/* HERO */}
       <section className="inner-hero products-hero">
         <div className="container inner-hero-inner">
+
           <div>
             <div className="section-kicker">
               PRODUCTS & VENTURES
             </div>
 
             <h1>
-              Building beyond
-              <span>services.</span>
+              Products we
+              <span>build and operate.</span>
             </h1>
 
             <p>
-              Ayaansh T Corp develops products and brands alongside
-              its technology and business services. Some are already
-              in market. Others are being developed for future launch.
+              Ayaansh T Corp develops and operates products and
+              ventures alongside its technology and digital services.
             </p>
           </div>
 
@@ -55,48 +35,50 @@ export default function Products() {
             <span>OUR PORTFOLIO</span>
 
             <strong>
-              Launched.
+              Active.
               <br />
               Developing.
               <br />
-              Coming soon.
+              Future.
             </strong>
           </div>
+
         </div>
       </section>
 
-      {/* INTRO */}
+      {/* PORTFOLIO INTRO */}
       <section className="section product-intro">
         <div className="container product-intro-grid">
 
           <div>
             <div className="section-kicker">
-              OUR VENTURE MODEL
+              OUR PRODUCTS
             </div>
 
             <h2>
-              From ideas
-              <span>to operating brands.</span>
+              Building products
+              <span>with a long-term view.</span>
             </h2>
           </div>
 
           <div>
             <p>
-              Products and brands are an important part of the
-              long-term Ayaansh T Corp strategy.
+              Our product portfolio is focused on building
+              practical brands and ventures with their own
+              identity, positioning and commercial potential.
             </p>
 
             <p>
-              We use our digital, operational and business capabilities
-              to develop ventures with their own positioning, identity
-              and commercial potential.
+              Each product is developed independently while
+              benefiting from the operational and digital
+              capabilities of Ayaansh T Corp.
             </p>
           </div>
 
         </div>
       </section>
 
-      {/* FEATURED LAUNCHED PRODUCT */}
+      {/* ACTIVE PRODUCT */}
       <section className="featured-product-section">
         <div className="container">
 
@@ -109,7 +91,7 @@ export default function Products() {
                 <Leaf size={44} />
               </div>
 
-              <span>LAUNCHED PRODUCT</span>
+              <span>ACTIVE PRODUCT</span>
 
               <strong>Leaf Alchemy</strong>
             </div>
@@ -118,11 +100,11 @@ export default function Products() {
 
               <div className="product-status-pill launched-pill">
                 <span />
-                LAUNCHED
+                ACTIVE
               </div>
 
               <div className="section-kicker">
-                PREMIUM TEA BRAND
+                CONSUMER PRODUCT
               </div>
 
               <h2>
@@ -130,14 +112,14 @@ export default function Products() {
               </h2>
 
               <p className="featured-product-lead">
-                A premium tea brand developed as part of the
-                Ayaansh T Corp product portfolio.
+                A tea brand developed and operated by
+                Ayaansh T Corp.
               </p>
 
               <p>
-                Leaf Alchemy represents the company's approach to
-                developing consumer products with a distinct brand
-                identity, product positioning and digital presence.
+                Leaf Alchemy is a product venture focused on
+                building a distinct tea brand, product identity
+                and commercial presence.
               </p>
 
               <div className="product-highlights">
@@ -149,21 +131,23 @@ export default function Products() {
 
                 <div>
                   <strong>02</strong>
-                  <span>Consumer product</span>
+                  <span>Tea products</span>
                 </div>
 
                 <div>
                   <strong>03</strong>
-                  <span>Digital presence</span>
+                  <span>Growing venture</span>
                 </div>
 
               </div>
 
               <a
-                href="#/contact"
+                href="https://leafalchemy.shop/"
                 className="corporate-button primary"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Enquire About the Brand
+                Visit Leaf Alchemy
                 <ArrowRight size={17} />
               </a>
 
@@ -174,27 +158,29 @@ export default function Products() {
         </div>
       </section>
 
-      {/* COMING SOON */}
+      {/* UPCOMING VENTURE */}
       <section className="section coming-soon-section">
         <div className="container">
 
           <div className="section-heading-large">
+
             <div>
               <div className="section-kicker">
-                COMING SOON
+                DEVELOPING
               </div>
 
               <h2>
-                The next ventures
-                <span>are already taking shape.</span>
+                More products
+                <span>are taking shape.</span>
               </h2>
             </div>
 
             <p>
-              Some product concepts require additional development
-              before launch. We prefer to introduce them when the
-              product, positioning and operating foundation are ready.
+              We are developing additional product concepts
+              that will be introduced when their product,
+              positioning and operating foundation are ready.
             </p>
+
           </div>
 
           <article className="coming-soon-product">
@@ -211,7 +197,7 @@ export default function Products() {
 
               <div className="product-status-pill coming-pill">
                 <span />
-                COMING SOON
+                DEVELOPING
               </div>
 
               <h3>
@@ -219,13 +205,13 @@ export default function Products() {
               </h3>
 
               <p>
-                An upcoming product venture currently under
-                development as part of the Ayaansh T Corp portfolio.
+                An upcoming product venture being developed
+                as part of the Ayaansh T Corp portfolio.
               </p>
 
               <p>
-                Further product information, positioning and launch
-                details will be introduced when the venture is ready.
+                Further product information will be introduced
+                as the venture moves toward launch.
               </p>
 
             </div>
@@ -239,7 +225,7 @@ export default function Products() {
         </div>
       </section>
 
-      {/* PRODUCT PRINCIPLES */}
+      {/* PRODUCT APPROACH */}
       <section className="product-principles-section">
         <div className="container">
 
@@ -247,107 +233,65 @@ export default function Products() {
 
             <div>
               <div className="section-kicker light-kicker">
-                HOW WE BUILD
+                OUR APPROACH
               </div>
 
               <h2>
-                Products need more
-                <span>than a good idea.</span>
+                Products built
+                <span>for the real market.</span>
               </h2>
             </div>
 
             <p>
-              We approach product ventures with the same execution
-              discipline we apply to our services.
+              We focus on building products with a clear purpose,
+              strong positioning and the ability to operate beyond
+              the initial concept.
             </p>
 
           </div>
 
           <div className="product-principles-grid">
 
-            {productPrinciples.map((principle) => {
-              const Icon = principle.icon;
+            <article className="product-principle">
+              <Sparkles size={23} />
 
-              return (
-                <article
-                  className="product-principle"
-                  key={principle.title}
-                >
-                  <Icon size={23} />
+              <h3>
+                Purpose
+              </h3>
 
-                  <h3>{principle.title}</h3>
+              <p>
+                Every product starts with a clear opportunity
+                and a reason for existing.
+              </p>
+            </article>
 
-                  <p>{principle.text}</p>
-                </article>
-              );
-            })}
+            <article className="product-principle">
+              <Package size={23} />
+
+              <h3>
+                Product
+              </h3>
+
+              <p>
+                We focus on creating real products rather than
+                stopping at concepts.
+              </p>
+            </article>
+
+            <article className="product-principle">
+              <Leaf size={23} />
+
+              <h3>
+                Brand
+              </h3>
+
+              <p>
+                Each venture is developed with its own identity,
+                positioning and market presence.
+              </p>
+            </article>
 
           </div>
-
-        </div>
-      </section>
-
-      {/* PORTFOLIO NOTE */}
-      <section className="section portfolio-note-section">
-        <div className="container portfolio-note">
-
-          <div>
-            <div className="section-kicker">
-              OUR PORTFOLIO
-            </div>
-
-            <h2>
-              More ventures can be
-              <span>added over time.</span>
-            </h2>
-          </div>
-
-          <div>
-            <p>
-              The Ayaansh T Corp portfolio is designed to evolve.
-              As new products and brands are developed, this section
-              will become the central place to discover them.
-            </p>
-
-            <a
-              href="#/contact"
-              className="text-link"
-            >
-              Discuss a product opportunity
-              <ExternalLink size={15} />
-            </a>
-          </div>
-
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="page-cta">
-        <div className="container page-cta-inner">
-
-          <div>
-            <div className="section-kicker">
-              PRODUCTS & PARTNERSHIPS
-            </div>
-
-            <h2>
-              Interested in a product?
-              <span>Let's start a conversation.</span>
-            </h2>
-
-            <p>
-              Contact us for product, partnership or venture-related
-              enquiries.
-            </p>
-          </div>
-
-          <a
-            href="#/contact"
-            className="corporate-button primary large"
-          >
-            Contact Us
-            <ArrowRight size={17} />
-          </a>
 
         </div>
       </section>

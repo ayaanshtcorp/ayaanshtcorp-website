@@ -1,0 +1,359 @@
+/* =========================================================
+   PROCUREMENT PAGE
+========================================================= */
+
+.procurement-page {
+  background: #ffffff;
+  color: #101828;
+}
+
+.procurement-container {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.procurement-hero {
+  padding: 120px 0 105px;
+  background: #071426;
+  color: #ffffff;
+}
+
+.procurement-eyebrow,
+.procurement-section-label {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.procurement-eyebrow {
+  margin-bottom: 22px;
+  color: #42c7e8;
+}
+
+.procurement-hero h1 {
+  max-width: 920px;
+  margin: 0;
+  font-size: clamp(46px, 6.5vw, 78px);
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+.procurement-hero-lead {
+  max-width: 760px;
+  margin: 30px 0 0;
+  color: #c8d3e1;
+  font-size: 19px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   INTRO
+========================================================= */
+
+.procurement-intro {
+  padding: 105px 0;
+}
+
+.procurement-intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: 85px;
+  align-items: start;
+}
+
+.procurement-section-label {
+  margin-bottom: 18px;
+  color: #1264ff;
+}
+
+.procurement-intro h2,
+.procurement-heading h2,
+.procurement-support h2,
+.procurement-end h2 {
+  margin: 0;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+
+.procurement-intro p {
+  margin: 0 0 22px;
+  color: #667085;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.procurement-services {
+  padding: 105px 0;
+  background: #f7f9fc;
+}
+
+.procurement-heading {
+  max-width: 760px;
+  margin-bottom: 55px;
+}
+
+.procurement-heading p {
+  margin: 20px 0 0;
+  color: #667085;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+.procurement-service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.procurement-service-card {
+  display: flex;
+  min-height: 390px;
+  flex-direction: column;
+  padding: 32px;
+  border: 1px solid #e4e7ec;
+  background: #ffffff;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.procurement-service-card:hover {
+  transform: translateY(-4px);
+  border-color: #1264ff;
+  box-shadow: 0 14px 35px rgba(7, 20, 38, 0.08);
+}
+
+.procurement-service-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.procurement-service-top > span {
+  color: #1264ff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.procurement-service-icon {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border: 1px solid #d9e1eb;
+  border-radius: 50%;
+  color: #1264ff;
+}
+
+.procurement-service-card h3 {
+  margin: 70px 0 15px;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+.procurement-service-card p {
+  margin: 0;
+  color: #667085;
+  line-height: 1.7;
+}
+
+.procurement-service-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 30px;
+  color: #1264ff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.procurement-service-card a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   WORKFLOW
+========================================================= */
+
+.procurement-workflow {
+  padding: 110px 0;
+}
+
+.procurement-workflow-list {
+  border-top: 1px solid #e4e7ec;
+}
+
+.procurement-workflow-item {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  gap: 30px;
+  padding: 32px 0;
+  border-bottom: 1px solid #e4e7ec;
+}
+
+.procurement-workflow-number {
+  color: #1264ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.procurement-workflow-item h3 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.procurement-workflow-item p {
+  max-width: 720px;
+  margin: 0;
+  color: #667085;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   SUPPORT MODEL
+========================================================= */
+
+.procurement-support {
+  padding: 105px 0;
+  background: #071426;
+  color: #ffffff;
+}
+
+.procurement-support-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 90px;
+  align-items: center;
+}
+
+.procurement-support .procurement-section-label {
+  color: #42c7e8;
+}
+
+.procurement-support-points {
+  display: grid;
+  gap: 0;
+}
+
+.procurement-support-points div {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 22px 0;
+  border-bottom: 1px solid #26374d;
+  color: #d7e0eb;
+  line-height: 1.55;
+}
+
+.procurement-support-points div:first-child {
+  border-top: 1px solid #26374d;
+}
+
+.procurement-support-points svg {
+  flex: 0 0 auto;
+  margin-top: 2px;
+  color: #42c7e8;
+}
+
+/* =========================================================
+   END
+========================================================= */
+
+.procurement-end {
+  padding: 105px 0 120px;
+  text-align: center;
+}
+
+.procurement-end .procurement-section-label {
+  margin-bottom: 18px;
+}
+
+.procurement-end h2 {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.procurement-end p {
+  max-width: 680px;
+  margin: 25px auto 0;
+  color: #667085;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+  .procurement-intro-grid,
+  .procurement-support-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .procurement-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .procurement-service-card {
+    min-height: 330px;
+  }
+
+  .procurement-hero {
+    padding: 90px 0 80px;
+  }
+}
+
+@media (max-width: 640px) {
+  .procurement-container {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .procurement-hero {
+    padding: 75px 0 65px;
+  }
+
+  .procurement-hero-lead {
+    font-size: 17px;
+  }
+
+  .procurement-intro,
+  .procurement-services,
+  .procurement-workflow,
+  .procurement-support,
+  .procurement-end {
+    padding: 75px 0;
+  }
+
+  .procurement-service-card {
+    min-height: 0;
+    padding: 26px;
+  }
+
+  .procurement-service-card h3 {
+    margin-top: 50px;
+  }
+
+  .procurement-workflow-item {
+    grid-template-columns: 45px minmax(0, 1fr);
+    gap: 18px;
+  }
+}

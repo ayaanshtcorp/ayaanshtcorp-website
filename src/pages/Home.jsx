@@ -2,7 +2,6 @@ import React from "react";
 import {
   ArrowRight,
   BarChart3,
-  Bot,
   Check,
   Cloud,
   Code2,
@@ -18,31 +17,37 @@ const solutions = [
     icon: Globe2,
     title: "Web Development",
     text: "Custom websites and digital experiences designed around your business, customers and conversion goals.",
+    href: "#/technology/web-development",
   },
   {
     icon: Smartphone,
     title: "Mobile Applications",
     text: "Mobile applications that connect customers, teams and business processes.",
+    href: "#/technology/mobile-applications",
   },
   {
     icon: Cloud,
     title: "SaaS",
     text: "Scalable software products designed for recurring use, operational efficiency and long-term growth.",
+    href: "#/technology/saas",
   },
   {
     icon: Code2,
     title: "Custom Software",
     text: "Business applications, dashboards, portals, workflows and integrations built around specific requirements.",
+    href: "#/technology/custom-software",
   },
   {
     icon: Workflow,
     title: "Automation",
     text: "Reduce repetitive work by connecting systems, workflows and business processes.",
+    href: "#/technology/automation",
   },
   {
     icon: BarChart3,
     title: "SEO & Digital Growth",
     text: "Build visibility, understand user behaviour and turn digital traffic into meaningful opportunities.",
+    href: "#/technology/seo-digital-growth",
   },
 ];
 
@@ -63,32 +68,20 @@ const technologies = [
   ["Data & Analytics", "Analytics · Reporting · Conversion", Database],
 ];
 
-function AiAssistantButton() {
-  return (
-    <button
-      className="at-ai-button"
-      type="button"
-      aria-label="Open Ayaansh AI Assistant"
-      title="Ayaansh AI Assistant"
-    >
-      <span className="at-ai-dot" />
-      <Bot size={18} />
-      <span>AI Assistant</span>
-    </button>
-  );
-}
-
 export default function Home() {
   return (
     <div className="at-site" id="home">
       <main>
+
         {/* =====================================================
             HERO
         ===================================================== */}
 
         <section className="at-hero">
           <div className="at-container at-hero-grid">
+
             <div className="at-hero-copy">
+
               <div className="at-eyebrow">
                 DIGITAL SOLUTIONS FOR BUSINESS
               </div>
@@ -106,22 +99,6 @@ export default function Home() {
                 to grow with you.
               </p>
 
-              <div className="at-actions">
-                <a
-                  className="at-btn at-btn-primary"
-                  href="#contact"
-                >
-                  Start a Project
-                  <ArrowRight size={16} />
-                </a>
-
-                <a
-                  className="at-btn at-btn-outline"
-                  href="#solutions"
-                >
-                  Explore Solutions
-                </a>
-              </div>
             </div>
 
             <div
@@ -152,9 +129,12 @@ export default function Home() {
 
                 <strong>AYAANSH T CORP</strong>
 
-                <small>INNOVATE · SOLVE · GROW</small>
+                <small>
+                  INNOVATE · SOLVE · GROW
+                </small>
               </div>
             </div>
+
           </div>
         </section>
 
@@ -163,8 +143,11 @@ export default function Home() {
         ===================================================== */}
 
         <section className="at-section" id="solutions">
+
           <div className="at-container">
+
             <div className="at-section-head at-center">
+
               <div className="at-eyebrow">
                 OUR DIGITAL SOLUTIONS
               </div>
@@ -180,14 +163,17 @@ export default function Home() {
                 first, then determine the right digital
                 solution.
               </p>
+
             </div>
 
             <div className="at-solution-grid">
+
               {solutions.map(
-                ({ icon: Icon, title, text }) => (
-                  <article
+                ({ icon: Icon, title, text, href }) => (
+                  <a
                     className="at-card at-solution-card"
                     key={title}
+                    href={href}
                   >
                     <div className="at-card-icon">
                       <Icon size={21} />
@@ -197,15 +183,18 @@ export default function Home() {
 
                     <p>{text}</p>
 
-                    <a href="#contact">
-                      Discuss this capability
+                    <span className="at-card-link">
+                      Explore capability
                       <ArrowRight size={14} />
-                    </a>
-                  </article>
+                    </span>
+                  </a>
                 )
               )}
+
             </div>
+
           </div>
+
         </section>
 
         {/* =====================================================
@@ -216,8 +205,11 @@ export default function Home() {
           className="at-methodology"
           id="methodology"
         >
+
           <div className="at-container at-method-grid">
+
             <div>
+
               <div className="at-eyebrow">
                 HOW WE WORK
               </div>
@@ -236,9 +228,11 @@ export default function Home() {
                 application, SaaS platform, custom
                 software or something simpler.
               </p>
+
             </div>
 
             <div className="at-step-grid">
+
               {steps.map(
                 ([number, title, text]) => (
                   <article
@@ -253,8 +247,11 @@ export default function Home() {
                   </article>
                 )
               )}
+
             </div>
+
           </div>
+
         </section>
 
         {/* =====================================================
@@ -265,8 +262,11 @@ export default function Home() {
           className="at-section at-tech-section"
           id="technology"
         >
+
           <div className="at-container">
+
             <div className="at-section-head at-center">
+
               <div className="at-eyebrow">
                 TECHNOLOGY
               </div>
@@ -281,9 +281,11 @@ export default function Home() {
                 automation and analytics technologies
                 to create reliable digital solutions.
               </p>
+
             </div>
 
             <div className="at-tech-grid">
+
               {technologies.map(
                 ([title, text, Icon]) => (
                   <div
@@ -298,8 +300,11 @@ export default function Home() {
                   </div>
                 )
               )}
+
             </div>
+
           </div>
+
         </section>
 
         {/* =====================================================
@@ -307,8 +312,11 @@ export default function Home() {
         ===================================================== */}
 
         <section className="at-section" id="work">
+
           <div className="at-container">
+
             <div className="at-section-head at-center">
+
               <div className="at-eyebrow">
                 SELECTED WORK
               </div>
@@ -324,10 +332,15 @@ export default function Home() {
                 show how we approach digital
                 experiences and software solutions.
               </p>
+
             </div>
 
             <div className="at-work-grid">
-              <article className="at-work-card at-work-featured">
+
+              <a
+                className="at-work-card at-work-featured"
+                href="#/case-studies"
+              >
                 <span>INTERNAL PROJECT</span>
 
                 <h3>Ayaansh T Corp</h3>
@@ -346,9 +359,17 @@ export default function Home() {
                   <i />
                   <i />
                 </div>
-              </article>
 
-              <article className="at-work-card">
+                <span className="at-card-link">
+                  Explore our work
+                  <ArrowRight size={14} />
+                </span>
+              </a>
+
+              <a
+                className="at-work-card"
+                href="#/case-studies"
+              >
                 <span>DEMONSTRATION</span>
 
                 <h3>Business Software</h3>
@@ -359,13 +380,16 @@ export default function Home() {
                   business systems can work together.
                 </p>
 
-                <a href="#contact">
-                  Discuss a similar requirement
-                  <ArrowRight size={15} />
-                </a>
-              </article>
+                <span className="at-card-link">
+                  Explore our work
+                  <ArrowRight size={14} />
+                </span>
+              </a>
+
             </div>
+
           </div>
+
         </section>
 
         {/* =====================================================
@@ -376,8 +400,11 @@ export default function Home() {
           className="at-section at-ventures"
           id="ventures"
         >
+
           <div className="at-container">
+
             <div className="at-section-head at-center">
+
               <div className="at-eyebrow">
                 PRODUCTS & VENTURES
               </div>
@@ -393,10 +420,13 @@ export default function Home() {
                 develops and operates products of
                 its own.
               </p>
+
             </div>
 
             <article className="at-venture-card">
+
               <div>
+
                 <div className="at-eyebrow">
                   ACTIVE PRODUCT
                 </div>
@@ -418,14 +448,18 @@ export default function Home() {
                   Visit Leaf Alchemy
                   <ArrowRight size={16} />
                 </a>
+
               </div>
 
               <div className="at-leaf-visual">
                 <span>LEAF</span>
                 <strong>ALCHEMY</strong>
               </div>
+
             </article>
+
           </div>
+
         </section>
 
         {/* =====================================================
@@ -436,8 +470,11 @@ export default function Home() {
           className="at-section at-procurement"
           id="procurement"
         >
+
           <div className="at-container at-proc-grid">
+
             <div>
+
               <div className="at-eyebrow">
                 SPECIALIZED BUSINESS SERVICES
               </div>
@@ -455,32 +492,39 @@ export default function Home() {
               </p>
 
               <div className="at-proc-capabilities">
-                <div>
+
+                <a href="#/procurement/rfq-research">
                   <Check size={16} />
                   <span>RFQ Research</span>
-                </div>
+                  <ArrowRight size={14} />
+                </a>
 
-                <div>
+                <a href="#/procurement/supplier-sourcing">
                   <Check size={16} />
                   <span>Supplier Sourcing</span>
-                </div>
+                  <ArrowRight size={14} />
+                </a>
 
-                <div>
+                <a href="#/procurement/quote-support">
                   <Check size={16} />
                   <span>Quote Support</span>
-                </div>
+                  <ArrowRight size={14} />
+                </a>
+
               </div>
 
               <a
                 className="at-text-link"
-                href="#contact"
+                href="#/what-we-do"
               >
                 Explore Procurement Services
                 <ArrowRight size={15} />
               </a>
+
             </div>
 
             <div className="at-flow">
+
               {[
                 "Opportunity",
                 "Requirement",
@@ -493,49 +537,14 @@ export default function Home() {
                   <strong>{item}</strong>
                 </div>
               ))}
+
             </div>
+
           </div>
+
         </section>
 
-        {/* =====================================================
-            FINAL CTA
-        ===================================================== */}
-
-        <section className="at-final" id="contact">
-          <div className="at-container">
-            <div className="at-final-box">
-              <div>
-                <div className="at-eyebrow">
-                  START A CONVERSATION
-                </div>
-
-                <h2>
-                  Have a business requirement?
-                </h2>
-
-                <p>
-                  Tell us what you're trying to
-                  accomplish. We'll help determine
-                  the right digital solution and the
-                  appropriate way to execute it.
-                </p>
-              </div>
-
-              <a
-                className="at-btn at-btn-primary"
-                href="#contact-form"
-              >
-                Start a Project
-                <ArrowRight size={16} />
-              </a>
-            </div>
-          </div>
-        </section>
-
-        
       </main>
-
-      <AiAssistantButton />
     </div>
   );
 }

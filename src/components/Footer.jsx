@@ -173,6 +173,27 @@ export default function Footer() {
             Email Us
           </a>
         </div>
+
+        {/* LEGAL & PRIVACY */}
+        <div className="footer-column">
+          <h4>Legal & Privacy</h4>
+
+          <a href="#/privacy-policy">
+            Privacy Policy
+          </a>
+
+          <a href="#/cookie-policy">
+            Cookie Policy
+          </a>
+
+          <a href="#/data-protection">
+            Data Protection
+          </a>
+
+          <a href="#/consent-preferences">
+            Consent Preferences
+          </a>
+        </div>
       </div>
 
       {/* FOOTER BOTTOM */}

@@ -1,0 +1,551 @@
+.automation-page {
+  background: #ffffff;
+  color: #101828;
+}
+
+/* HERO */
+
+.automation-hero {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 0 95px;
+  background:
+    radial-gradient(
+      circle at 88% 18%,
+      rgba(18, 100, 255, 0.2),
+      transparent 35%
+    ),
+    linear-gradient(
+      135deg,
+      #071426 0%,
+      #0b1f38 62%,
+      #102d50 100%
+    );
+  color: #ffffff;
+}
+
+.automation-hero-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+  gap: 75px;
+  align-items: center;
+}
+
+.automation-hero-copy {
+  max-width: 720px;
+}
+
+.automation-kicker {
+  margin-bottom: 18px;
+  color: #1264ff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.automation-kicker-light {
+  color: #68a1ff;
+}
+
+.automation-hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-size: clamp(48px, 6vw, 76px);
+  font-weight: 800;
+  letter-spacing: -0.055em;
+  line-height: 0.99;
+}
+
+.automation-hero h1 span,
+.automation-heading h2 span,
+.automation-two-column h2 span,
+.automation-solutions h2 span,
+.automation-cta h2 span {
+  display: block;
+}
+
+.automation-hero-copy > p {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: rgba(255, 255, 255, 0.73);
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.automation-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.automation-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  min-height: 50px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    transform 180ms ease,
+    background 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.automation-button:hover {
+  transform: translateY(-2px);
+}
+
+.automation-button-primary {
+  background: #1264ff;
+  color: #ffffff;
+  box-shadow: 0 12px 30px rgba(18, 100, 255, 0.25);
+}
+
+.automation-button-primary:hover {
+  background: #0b4fd4;
+}
+
+.automation-button-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.04);
+  color: #ffffff;
+}
+
+/* FLOW VISUAL */
+
+.automation-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.automation-flow-panel {
+  width: min(100%, 510px);
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+}
+
+.automation-flow-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px 22px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.automation-flow-header strong {
+  padding: 5px 9px;
+  border-radius: 20px;
+  background: rgba(18, 100, 255, 0.16);
+  color: #8ab5ff;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+}
+
+.automation-flow {
+  padding: 27px 25px 32px;
+}
+
+.automation-flow-node {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 17px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 11px;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.automation-node-number {
+  display: flex;
+  width: 34px;
+  height: 34px;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: rgba(18, 100, 255, 0.16);
+  color: #68a1ff;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.automation-flow-node div {
+  flex: 1;
+}
+
+.automation-flow-node strong {
+  display: block;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.automation-flow-node small {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 10px;
+}
+
+.automation-flow-node-final svg {
+  color: #68a1ff;
+}
+
+.automation-flow-connector {
+  width: 1px;
+  height: 25px;
+  margin-left: 33px;
+  background: rgba(104, 161, 255, 0.35);
+}
+
+/* GENERAL */
+
+.automation-section {
+  padding: 105px 0;
+  background: #ffffff;
+}
+
+.automation-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 0.7fr);
+  gap: 70px;
+  align-items: end;
+  margin-bottom: 55px;
+}
+
+.automation-heading h2,
+.automation-two-column h2,
+.automation-solutions h2,
+.automation-cta h2 {
+  margin: 0;
+  color: #101828;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 1.05;
+}
+
+.automation-heading > p {
+  margin: 0;
+  color: #667085;
+  font-size: 17px;
+  line-height: 1.75;
+}
+
+/* CAPABILITIES */
+
+.automation-capability-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.automation-capability-card {
+  display: flex;
+  min-height: 300px;
+  flex-direction: column;
+  padding: 30px;
+  border: 1px solid #e4e7ec;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 8px 30px rgba(16, 24, 40, 0.045);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.automation-capability-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(18, 100, 255, 0.3);
+  box-shadow: 0 18px 42px rgba(16, 24, 40, 0.09);
+}
+
+.automation-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 27px;
+  border-radius: 12px;
+  background: #eaf2ff;
+  color: #1264ff;
+}
+
+.automation-capability-card h3 {
+  margin: 0;
+  color: #101828;
+  font-size: 23px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.automation-capability-card p {
+  margin: 14px 0 0;
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.automation-capability-card a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 24px;
+  color: #1264ff;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* DARK SECTION */
+
+.automation-dark {
+  padding: 105px 0;
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(18, 100, 255, 0.2),
+      transparent 35%
+    ),
+    #071426;
+}
+
+.automation-two-column {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.automation-two-column h2 {
+  color: #ffffff;
+}
+
+.automation-two-column p {
+  max-width: 680px;
+  margin: 24px 0 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.automation-benefits {
+  display: grid;
+  gap: 0;
+}
+
+.automation-benefits div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 19px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.automation-benefits strong {
+  min-width: 30px;
+  color: #68a1ff;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.automation-benefits span {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* PROCESS */
+
+.automation-process-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.automation-process-card {
+  min-height: 250px;
+  padding: 30px;
+  border: 1px solid #e4e7ec;
+  border-radius: 18px;
+  background: #ffffff;
+}
+
+.automation-process-number {
+  margin-bottom: 58px;
+  color: #1264ff;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.automation-process-card h3 {
+  margin: 0;
+  color: #101828;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+.automation-process-card p {
+  margin: 12px 0 0;
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* AUTOMATION AREAS */
+
+.automation-solutions {
+  padding: 105px 0;
+  background: #f7f9fc;
+}
+
+.automation-solutions-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.automation-solutions p {
+  max-width: 650px;
+  margin: 22px 0 0;
+  color: #667085;
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.automation-area-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.automation-area-list div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 58px;
+  padding: 14px 16px;
+  border: 1px solid #e0e6ef;
+  border-radius: 10px;
+  background: #ffffff;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.automation-area-list svg {
+  flex: 0 0 auto;
+  color: #1264ff;
+}
+
+/* CTA */
+
+.automation-cta {
+  padding: 100px 0;
+  background: #ffffff;
+}
+
+.automation-cta-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 55px 60px;
+  border: 1px solid #d4e3ff;
+  border-radius: 22px;
+  background: #eaf2ff;
+}
+
+.automation-cta-inner p {
+  max-width: 700px;
+  margin: 18px 0 0;
+  color: #667085;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .automation-hero-inner,
+  .automation-two-column,
+  .automation-solutions-inner {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .automation-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .automation-capability-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .automation-process-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .automation-hero {
+    padding: 75px 0 65px;
+  }
+
+  .automation-hero h1 {
+    font-size: clamp(42px, 12vw, 58px);
+  }
+
+  .automation-section,
+  .automation-dark,
+  .automation-solutions,
+  .automation-cta {
+    padding: 75px 0;
+  }
+
+  .automation-capability-grid,
+  .automation-process-grid,
+  .automation-solutions-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-area-list {
+    grid-template-columns: 1fr;
+  }
+
+  .automation-cta-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 35px 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .automation-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .automation-button {
+    width: 100%;
+  }
+}

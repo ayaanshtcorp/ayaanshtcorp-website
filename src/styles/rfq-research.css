@@ -1,0 +1,582 @@
+/* =========================================================
+   AYAANSH T CORP — RFQ RESEARCH
+   ========================================================= */
+
+.rfq-page {
+  --rfq-navy: #071426;
+  --rfq-navy-2: #0b1f38;
+  --rfq-blue: #1264ff;
+  --rfq-cyan: #42c7e8;
+  --rfq-text: #101828;
+  --rfq-muted: #667085;
+  --rfq-border: #e4e7ec;
+  --rfq-soft: #f7f9fc;
+  background: #ffffff;
+  color: var(--rfq-text);
+}
+
+.rfq-container {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.rfq-hero {
+  background:
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(18, 100, 255, 0.14),
+      transparent 34%
+    ),
+    var(--rfq-navy);
+  color: #ffffff;
+  overflow: hidden;
+}
+
+.rfq-hero-inner {
+  min-height: 650px;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(360px, 0.85fr);
+  align-items: center;
+  gap: 80px;
+  padding-top: 110px;
+  padding-bottom: 90px;
+}
+
+.rfq-hero-copy {
+  max-width: 720px;
+}
+
+.rfq-kicker {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--rfq-blue);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rfq-kicker-line {
+  width: 28px;
+  height: 2px;
+  background: currentColor;
+  display: inline-block;
+}
+
+.rfq-hero .rfq-kicker {
+  color: var(--rfq-cyan);
+}
+
+.rfq-hero h1 {
+  margin: 24px 0 24px;
+  max-width: 760px;
+  font-size: clamp(48px, 6vw, 76px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  font-weight: 750;
+}
+
+.rfq-hero h1 span,
+.rfq-section-heading h2 span,
+.rfq-two-column h2 span,
+.rfq-qualification h2 span,
+.rfq-final h2 span {
+  color: var(--rfq-blue);
+}
+
+.rfq-hero p {
+  max-width: 650px;
+  margin: 0;
+  color: #b9c5d4;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.rfq-hero-meta {
+  display: flex;
+  gap: 36px;
+  margin-top: 48px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.rfq-hero-meta div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.rfq-hero-meta strong {
+  font-size: 13px;
+  color: var(--rfq-cyan);
+}
+
+.rfq-hero-meta span {
+  font-size: 13px;
+  color: #d7dfeb;
+}
+
+.rfq-hero-panel {
+  position: relative;
+  padding: 38px;
+  background: rgba(255, 255, 255, 0.055);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+}
+
+.rfq-panel-icon {
+  width: 54px;
+  height: 54px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 28px;
+  background: rgba(66, 199, 232, 0.12);
+  color: var(--rfq-cyan);
+  border: 1px solid rgba(66, 199, 232, 0.25);
+}
+
+.rfq-panel-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #8fa1b8;
+}
+
+.rfq-hero-panel h2 {
+  margin: 14px 0 30px;
+  font-size: 32px;
+  line-height: 1.15;
+  letter-spacing: -0.025em;
+}
+
+.rfq-panel-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.13);
+  margin-bottom: 6px;
+}
+
+.rfq-panel-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+.rfq-panel-row span {
+  color: #91a0b2;
+}
+
+.rfq-panel-row strong {
+  color: #ffffff;
+}
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.rfq-section {
+  padding: 110px 0;
+}
+
+.rfq-section-soft {
+  background: var(--rfq-soft);
+}
+
+.rfq-section-heading {
+  max-width: 760px;
+}
+
+.rfq-section-heading h2,
+.rfq-two-column h2,
+.rfq-qualification h2 {
+  margin: 18px 0 18px;
+  font-size: clamp(36px, 4vw, 54px);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+}
+
+.rfq-section-heading p,
+.rfq-two-column p,
+.rfq-qualification p {
+  margin: 0;
+  max-width: 700px;
+  color: var(--rfq-muted);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.rfq-heading-centered {
+  margin: 0 auto 55px;
+  text-align: center;
+}
+
+.rfq-heading-centered .rfq-kicker {
+  justify-content: center;
+}
+
+.rfq-heading-centered p {
+  margin: 0 auto;
+}
+
+/* =========================================================
+   RESEARCH CARDS
+   ========================================================= */
+
+.rfq-research-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin-top: 60px;
+}
+
+.rfq-research-card {
+  position: relative;
+  min-height: 285px;
+  padding: 30px;
+  border: 1px solid var(--rfq-border);
+  background: #ffffff;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.rfq-research-card:hover {
+  transform: translateY(-5px);
+  border-color: #c8d4e5;
+  box-shadow: 0 18px 45px rgba(7, 20, 38, 0.08);
+}
+
+.rfq-card-icon {
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  color: var(--rfq-blue);
+  background: #eef4ff;
+  margin-bottom: 32px;
+}
+
+.rfq-research-card h3 {
+  margin: 0 0 12px;
+  font-size: 21px;
+  letter-spacing: -0.02em;
+}
+
+.rfq-research-card p {
+  margin: 0;
+  color: var(--rfq-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.rfq-card-arrow {
+  position: absolute;
+  right: 28px;
+  bottom: 27px;
+  color: var(--rfq-blue);
+}
+
+/* =========================================================
+   TWO COLUMN
+   ========================================================= */
+
+.rfq-two-column {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 100px;
+  align-items: start;
+}
+
+.rfq-source-content {
+  padding-top: 8px;
+}
+
+.rfq-source-list {
+  display: grid;
+  gap: 0;
+  margin-top: 32px;
+  border-top: 1px solid var(--rfq-border);
+}
+
+.rfq-source-list div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 17px 0;
+  border-bottom: 1px solid var(--rfq-border);
+  color: var(--rfq-text);
+  font-size: 14px;
+}
+
+.rfq-source-list svg {
+  color: var(--rfq-blue);
+  flex: 0 0 auto;
+}
+
+/* =========================================================
+   DELIVERABLES
+   ========================================================= */
+
+.rfq-deliverables {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0 60px;
+  border-top: 1px solid var(--rfq-border);
+}
+
+.rfq-deliverable {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 68px;
+  border-bottom: 1px solid var(--rfq-border);
+  font-size: 15px;
+}
+
+.rfq-deliverable svg {
+  color: var(--rfq-blue);
+  flex: 0 0 auto;
+}
+
+/* =========================================================
+   WORKFLOW
+   ========================================================= */
+
+.rfq-workflow {
+  padding: 110px 0;
+  background: var(--rfq-navy);
+  color: #ffffff;
+}
+
+.rfq-kicker-light {
+  color: var(--rfq-cyan);
+}
+
+.rfq-heading-light h2 {
+  color: #ffffff;
+}
+
+.rfq-heading-light p {
+  color: #aebdce;
+}
+
+.rfq-workflow-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 60px;
+  border-top: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.rfq-workflow-item {
+  min-height: 250px;
+  padding: 28px 25px 28px 0;
+  margin-right: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+  border-right: 1px solid rgba(255, 255, 255, 0.13);
+}
+
+.rfq-workflow-item:last-child {
+  border-right: 0;
+  margin-right: 0;
+}
+
+.rfq-workflow-number {
+  display: block;
+  margin-bottom: 52px;
+  color: var(--rfq-cyan);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.rfq-workflow-item h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.rfq-workflow-item p {
+  margin: 0;
+  color: #9eafc2;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* =========================================================
+   QUALIFICATION
+   ========================================================= */
+
+.rfq-qualification {
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.rfq-qualification-icon {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  color: var(--rfq-blue);
+  background: #eef4ff;
+}
+
+/* =========================================================
+   FINAL
+   ========================================================= */
+
+.rfq-final {
+  padding: 75px 0;
+  background: #f1f5fa;
+}
+
+.rfq-final-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.rfq-final-label {
+  display: block;
+  margin-bottom: 13px;
+  color: var(--rfq-blue);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+}
+
+.rfq-final h2 {
+  max-width: 750px;
+  margin: 0;
+  font-size: clamp(30px, 4vw, 48px);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.rfq-final-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+  padding: 16px 21px;
+  background: var(--rfq-blue);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 180ms ease;
+}
+
+.rfq-final-link:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+  .rfq-hero-inner {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .rfq-hero-panel {
+    max-width: 600px;
+  }
+
+  .rfq-research-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rfq-two-column {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .rfq-workflow-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .rfq-workflow-item {
+    border-right: 1px solid rgba(255, 255, 255, 0.13);
+  }
+
+  .rfq-workflow-item:nth-child(2n) {
+    border-right: 0;
+  }
+
+  .rfq-final-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 650px) {
+  .rfq-container {
+    width: min(100% - 32px, 1180px);
+  }
+
+  .rfq-section,
+  .rfq-workflow {
+    padding: 75px 0;
+  }
+
+  .rfq-hero-inner {
+    min-height: auto;
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+
+  .rfq-hero h1 {
+    font-size: 46px;
+  }
+
+  .rfq-hero p {
+    font-size: 16px;
+  }
+
+  .rfq-hero-meta {
+    flex-wrap: wrap;
+    gap: 22px 30px;
+  }
+
+  .rfq-hero-panel {
+    padding: 28px;
+  }
+
+  .rfq-research-grid,
+  .rfq-deliverables,
+  .rfq-workflow-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rfq-research-card {
+    min-height: auto;
+  }
+
+  .rfq-workflow-item,
+  .rfq-workflow-item:nth-child(2n) {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: 0;
+  }
+
+  .rfq-workflow-number {
+    margin-bottom: 30px;
+  }
+
+  .rfq-qualification {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+}

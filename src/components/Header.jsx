@@ -10,7 +10,6 @@ import {
   Code2,
   Workflow,
   Search,
-  Leaf,
   FileSearch,
   Users,
   Quote,
@@ -20,45 +19,32 @@ const technologyItems = [
   {
     label: "Web Development",
     icon: Globe2,
-    href: "#/what-we-do",
+    href: "#/technology/web-development",
   },
   {
     label: "Mobile Applications",
     icon: Smartphone,
-    href: "#/what-we-do",
+    href: "#/technology/mobile-applications",
   },
   {
-    label: "SaaS",
+    label: "SaaS Solutions",
     icon: Cloud,
-    href: "#/what-we-do",
+    href: "#/technology/saas",
   },
   {
     label: "Custom Software",
     icon: Code2,
-    href: "#/what-we-do",
+    href: "#/technology/custom-software",
   },
   {
     label: "Automation",
     icon: Workflow,
-    href: "#/what-we-do",
+    href: "#/technology/automation",
   },
   {
     label: "SEO & Digital Growth",
     icon: Search,
-    href: "#/what-we-do",
-  },
-];
-
-const productItems = [
-  {
-    label: "Leaf Alchemy",
-    icon: Leaf,
-    href: "#/products",
-  },
-  {
-    label: "Products & Ventures",
-    icon: Cloud,
-    href: "#/products",
+    href: "#/technology/seo-digital-growth",
   },
 ];
 
@@ -66,17 +52,17 @@ const procurementItems = [
   {
     label: "RFQ Research",
     icon: FileSearch,
-    href: "#/what-we-do",
+    href: "#/procurement/rfq-research",
   },
   {
     label: "Supplier Sourcing",
     icon: Users,
-    href: "#/what-we-do",
+    href: "#/procurement/supplier-sourcing",
   },
   {
     label: "Quote Support",
     icon: Quote,
-    href: "#/what-we-do",
+    href: "#/procurement/quote-support",
   },
 ];
 
@@ -177,7 +163,25 @@ export default function Header() {
           }
         >
 
-          {/* TECHNOLOGY SOLUTIONS */}
+          {/* 1. HOME */}
+          <a
+            href="#/"
+            className="at-global-nav-link"
+            onClick={closeMenus}
+          >
+            Home
+          </a>
+
+          {/* 2. WHO WE ARE */}
+          <a
+            href="#/who-we-are"
+            className="at-global-nav-link"
+            onClick={closeMenus}
+          >
+            Who We Are
+          </a>
+
+          {/* 3. TECHNOLOGY SOLUTIONS */}
           <div
             className="at-global-nav-item"
             onMouseEnter={() => {
@@ -214,62 +218,7 @@ export default function Header() {
             )}
           </div>
 
-          {/* HOW WE WORK */}
-          <a
-            href="#/who-we-are"
-            className="at-global-nav-link"
-            onClick={closeMenus}
-          >
-            How We Work
-          </a>
-
-          {/* WORK */}
-          <a
-            href="#/case-studies"
-            className="at-global-nav-link"
-            onClick={closeMenus}
-          >
-            Work
-          </a>
-
-          {/* PRODUCTS & VENTURES */}
-          <div
-            className="at-global-nav-item"
-            onMouseEnter={() => {
-              if (!mobileOpen) {
-                setActiveMenu("products");
-              }
-            }}
-          >
-            <button
-              type="button"
-              className="at-global-nav-trigger"
-              onClick={() => toggleMenu("products")}
-              aria-expanded={
-                activeMenu === "products"
-              }
-            >
-              Products & Ventures
-
-              <ChevronDown
-                size={14}
-                className={
-                  activeMenu === "products"
-                    ? "at-nav-chevron at-nav-chevron-open"
-                    : "at-nav-chevron"
-                }
-              />
-            </button>
-
-            {activeMenu === "products" && (
-              <Dropdown
-                items={productItems}
-                onNavigate={closeMenus}
-              />
-            )}
-          </div>
-
-          {/* PROCUREMENT */}
+          {/* 4. PROCUREMENT */}
           <div
             className="at-global-nav-item"
             onMouseEnter={() => {
@@ -281,9 +230,7 @@ export default function Header() {
             <button
               type="button"
               className="at-global-nav-trigger"
-              onClick={() =>
-                toggleMenu("procurement")
-              }
+              onClick={() => toggleMenu("procurement")}
               aria-expanded={
                 activeMenu === "procurement"
               }
@@ -308,7 +255,16 @@ export default function Header() {
             )}
           </div>
 
-          {/* INSIGHTS */}
+          {/* 5. PRODUCTS & VENTURES */}
+          <a
+            href="#/products"
+            className="at-global-nav-link"
+            onClick={closeMenus}
+          >
+            Products & Ventures
+          </a>
+
+          {/* 6. INSIGHTS */}
           <a
             href="#/insights"
             className="at-global-nav-link"
@@ -317,23 +273,13 @@ export default function Header() {
             Insights
           </a>
 
-          {/* CONTACT */}
+          {/* 7. CONTACT */}
           <a
             href="#/contact"
             className="at-global-nav-link"
             onClick={closeMenus}
           >
             Contact
-          </a>
-
-          {/* PRIMARY CTA */}
-          <a
-            href="#/contact"
-            className="at-global-nav-cta"
-            onClick={closeMenus}
-          >
-            Start a Project
-            <ArrowRight size={15} />
           </a>
 
         </nav>

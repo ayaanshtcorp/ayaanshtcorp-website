@@ -2,51 +2,13 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 
 const menus = {
-  "What We Do": {
-    intro: "Capabilities built around real business requirements.",
-    columns: [
-      {
-        title: "Digital Solutions",
-        items: [
-          ["Web Development", "#/what-we-do"],
-          ["Digital Experience", "#/what-we-do"],
-          ["Website Modernization", "#/what-we-do"],
-        ],
-      },
-      {
-        title: "Technology Services",
-        items: [
-          ["Cloud Solutions", "#/what-we-do"],
-          ["Automation", "#/what-we-do"],
-          ["Technical Services", "#/what-we-do"],
-        ],
-      },
-      {
-        title: "Procurement Support",
-        items: [
-          ["RFQ Research", "#/what-we-do"],
-          ["Supplier Sourcing", "#/what-we-do"],
-          ["Quote Management", "#/what-we-do"],
-        ],
-      },
-      {
-        title: "Business Services",
-        items: [
-          ["Business Research", "#/what-we-do"],
-          ["Digital Operations", "#/what-we-do"],
-          ["Sourcing Support", "#/what-we-do"],
-        ],
-      },
-    ],
-  },
-
   "Who We Are": {
     intro: "A practical company built around execution.",
     columns: [
       {
         title: "Our Company",
         items: [
-          ["About Us", "#/who-we-are"],
+          ["Who We Are", "#/who-we-are"],
           ["Our Purpose", "#/who-we-are"],
         ],
       },
@@ -54,50 +16,76 @@ const menus = {
         title: "How We Work",
         items: [
           ["Our Approach", "#/who-we-are"],
-          ["What Makes Us Reliable", "#/who-we-are"],
+          ["Our Process", "#/who-we-are"],
         ],
       },
     ],
   },
 
-  Industries: {
-    intro: "Capabilities that adapt to the organization.",
+  "Technology Solutions": {
+    intro: "Digital solutions designed around real business requirements.",
     columns: [
       {
-        title: "Public Sector",
+        title: "Digital Solutions",
         items: [
-          ["Government & Public Sector", "#/industries"],
+          ["Web Development", "#/technology/web-development"],
+          ["Mobile Applications", "#/technology/mobile-applications"],
+          ["SaaS Solutions", "#/technology/saas"],
         ],
       },
       {
-        title: "Business",
+        title: "Software & Automation",
         items: [
-          ["Small & Mid-Sized Business", "#/industries"],
-          ["Technology", "#/industries"],
+          ["Custom Software", "#/technology/custom-software"],
+          ["Automation", "#/technology/automation"],
         ],
       },
       {
-        title: "Products",
+        title: "Digital Growth",
         items: [
-          ["Consumer Products", "#/industries"],
+          ["SEO & Digital Growth", "#/technology/seo-digital-growth"],
         ],
       },
     ],
   },
 
-  Products: {
-    intro: "Products and ventures we're building.",
+  "Products & Ventures": {
+    intro: "Products and ventures built and operated by Ayaansh T Corp.",
     columns: [
       {
-        title: "Launched",
+        title: "Active Products",
         items: [
           ["Leaf Alchemy", "#/products"],
         ],
       },
       {
-        title: "Coming Soon",
+        title: "Ventures",
         items: [
-          ["Classic Leaf", "#/products"],
+          ["Products & Ventures", "#/products"],
+        ],
+      },
+    ],
+  },
+
+  Procurement: {
+    intro: "Research, sourcing and quote support for applicable procurement opportunities.",
+    columns: [
+      {
+        title: "Procurement Research",
+        items: [
+          ["RFQ Research", "#/procurement/rfq-research"],
+        ],
+      },
+      {
+        title: "Supplier Support",
+        items: [
+          ["Supplier Sourcing", "#/procurement/supplier-sourcing"],
+        ],
+      },
+      {
+        title: "Quote Support",
+        items: [
+          ["Quote Support", "#/procurement/quote-support"],
         ],
       },
     ],
