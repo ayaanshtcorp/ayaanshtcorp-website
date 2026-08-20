@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/wrangler/config-schema.json",
-  "name": "ayaanshtcorp",
+  "name": "ayaanshtcorp-website",
   "main": "src/worker.js",
   "compatibility_date": "2026-08-18",
   "assets": {
