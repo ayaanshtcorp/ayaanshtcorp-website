@@ -583,10 +583,6 @@ export default function Contact() {
 
                   <p>{option.text}</p>
 
-                  <a href="#/contact">
-                    Start an enquiry
-                    <ArrowRight size={15} />
-                  </a>
                 </article>
               );
             })}
@@ -660,13 +656,6 @@ export default function Contact() {
               </p>
             </div>
 
-            <a
-              href="#/contact"
-              className="corporate-button primary large"
-            >
-              Start an Enquiry
-              <ArrowRight size={17} />
-            </a>
 
           </div>
 

@@ -104,19 +104,12 @@ export default function CustomSoftware() {
 
             <div className="custom-software-actions">
               <a
-                href="#/contact"
-                className="custom-software-button custom-software-button-primary"
-              >
-                Discuss Your Requirement
-                <ArrowRight size={16} />
-              </a>
-
-              <a
                 href="#capabilities"
                 className="custom-software-button custom-software-button-secondary"
               >
                 Explore Capabilities
               </a>
+
             </div>
           </div>
 
@@ -223,11 +216,6 @@ export default function CustomSoftware() {
                   <h3>{capability.title}</h3>
 
                   <p>{capability.text}</p>
-
-                  <a href="#/contact">
-                    Discuss this capability
-                    <ArrowRight size={14} />
-                  </a>
                 </article>
               );
             })}
@@ -358,31 +346,15 @@ export default function CustomSoftware() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="custom-software-cta">
         <div className="container custom-software-cta-inner">
           <div>
-            <div className="custom-software-kicker">
-              HAVE A SPECIFIC REQUIREMENT?
-            </div>
-
-            <h2>
-              Let's build software
-              <span>that fits the problem.</span>
-            </h2>
-
-            <p>
-              Tell us what your current process looks like,
-              where the friction exists and what the software
-              needs to accomplish.
-            </p>
+            <div className="custom-software-kicker">HAVE A SPECIFIC REQUIREMENT?</div>
+            <h2>Let's build software<span>that fits the problem.</span></h2>
+            <p>Tell us what your current process looks like, where the friction exists and what the software needs to accomplish.</p>
           </div>
-
-          <a
-            href="#/contact"
-            className="custom-software-button custom-software-button-primary"
-          >
-            Start a Conversation
+          <a href="#/contact" className="custom-software-button custom-software-button-primary">
+            Discuss Your Software
             <ArrowRight size={17} />
           </a>
         </div>

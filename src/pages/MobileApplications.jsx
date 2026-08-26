@@ -103,14 +103,6 @@ export default function MobileApplications() {
 
             <div className="mobile-applications-actions">
               <a
-                href="#/contact"
-                className="mobile-applications-button mobile-applications-button-primary"
-              >
-                Start a Project
-                <ArrowRight size={16} />
-              </a>
-
-              <a
                 href="#capabilities"
                 className="mobile-applications-button mobile-applications-button-secondary"
               >
@@ -199,11 +191,6 @@ export default function MobileApplications() {
                   <h3>{capability.title}</h3>
 
                   <p>{capability.text}</p>
-
-                  <a href="#/contact">
-                    Discuss this capability
-                    <ArrowRight size={14} />
-                  </a>
                 </article>
               );
             })}
@@ -329,30 +316,15 @@ export default function MobileApplications() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="mobile-applications-cta">
         <div className="container mobile-applications-cta-inner">
           <div>
-            <div className="mobile-applications-kicker">
-              HAVE A MOBILE REQUIREMENT?
-            </div>
-
-            <h2>
-              Turn your idea into
-              <span>a useful mobile experience.</span>
-            </h2>
-
-            <p>
-              Tell us what you want the application to achieve
-              and we'll discuss the most practical way to build it.
-            </p>
+            <div className="mobile-applications-kicker">HAVE A MOBILE REQUIREMENT?</div>
+            <h2>Turn your idea into<span>a useful mobile experience.</span></h2>
+            <p>Tell us what you want the application to achieve and we'll discuss the most practical way to build it.</p>
           </div>
-
-          <a
-            href="#/contact"
-            className="mobile-applications-button mobile-applications-button-primary"
-          >
-            Start a Conversation
+          <a href="#/contact" className="mobile-applications-button mobile-applications-button-primary">
+            Discuss Your App
             <ArrowRight size={17} />
           </a>
         </div>

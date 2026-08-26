@@ -203,10 +203,6 @@ export default function Industries() {
                     ))}
                   </div>
 
-                  <a href="#/contact">
-                    Discuss your requirement
-                    <ArrowRight size={15} />
-                  </a>
                 </article>
               );
             })}

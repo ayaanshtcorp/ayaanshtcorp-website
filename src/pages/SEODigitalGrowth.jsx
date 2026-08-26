@@ -105,19 +105,12 @@ function SEODigitalGrowth() {
 
             <div className="seo-growth-actions">
               <a
-                href="#/contact"
-                className="seo-growth-button seo-growth-button-primary"
-              >
-                Grow Your Digital Presence
-                <ArrowRight size={16} />
-              </a>
-
-              <a
                 href="#capabilities"
                 className="seo-growth-button seo-growth-button-secondary"
               >
                 Explore Capabilities
               </a>
+
             </div>
           </div>
 
@@ -230,11 +223,6 @@ function SEODigitalGrowth() {
                   <h3>{capability.title}</h3>
 
                   <p>{capability.text}</p>
-
-                  <a href="#/contact">
-                    Discuss this capability
-                    <ArrowRight size={14} />
-                  </a>
 
                 </article>
               );
@@ -382,37 +370,17 @@ function SEODigitalGrowth() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="seo-growth-cta">
         <div className="container seo-growth-cta-inner">
-
           <div>
-
-            <div className="seo-growth-kicker">
-              READY TO IMPROVE YOUR DIGITAL PRESENCE?
-            </div>
-
-            <h2>
-              Turn your website
-              <span>into a growth asset.</span>
-            </h2>
-
-            <p>
-              Tell us where your digital presence is today and what
-              you want it to achieve. We'll help identify the most
-              practical next steps.
-            </p>
-
+            <div className="seo-growth-kicker">READY TO IMPROVE YOUR DIGITAL PRESENCE?</div>
+            <h2>Turn your website<span>into a growth asset.</span></h2>
+            <p>Tell us where your digital presence is today and what you want it to achieve. We'll help identify the most practical next steps.</p>
           </div>
-
-          <a
-            href="#/contact"
-            className="seo-growth-button seo-growth-button-primary"
-          >
-            Discuss Digital Growth
+          <a href="#/contact" className="seo-growth-button seo-growth-button-primary">
+            Discuss Your Growth
             <ArrowRight size={17} />
           </a>
-
         </div>
       </section>
 

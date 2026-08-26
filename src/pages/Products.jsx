@@ -142,13 +142,21 @@ export default function Products() {
               </div>
 
               <a
-                href="https://leafalchemy.shop/"
+                href="#/contact"
                 className="corporate-button primary"
+              >
+                Request Information
+                <ArrowRight size={17} />
+              </a>
+
+              <a
+                href="https://leafalchemy.shop/"
+                className="text-link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Visit Leaf Alchemy
-                <ArrowRight size={17} />
+                <ArrowRight size={16} />
               </a>
 
             </div>

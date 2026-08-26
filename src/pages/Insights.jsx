@@ -307,13 +307,6 @@ export default function Insights() {
             </p>
           </div>
 
-          <a
-            href="#/contact"
-            className="corporate-button primary"
-          >
-            Talk to Us
-            <ArrowRight size={17} />
-          </a>
 
         </div>
       </section>

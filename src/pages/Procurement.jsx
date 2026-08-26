@@ -263,6 +263,14 @@ export default function Procurement() {
             Explore the individual capabilities to understand how
             each part of the procurement workflow can be supported.
           </p>
+
+          <a
+            href="#/contact"
+            className="corporate-button primary"
+          >
+            Discuss Procurement
+            <ArrowRight size={17} />
+          </a>
         </div>
       </section>
 

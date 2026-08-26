@@ -104,19 +104,12 @@ export default function Automation() {
 
             <div className="automation-actions">
               <a
-                href="#/contact"
-                className="automation-button automation-button-primary"
-              >
-                Automate a Process
-                <ArrowRight size={16} />
-              </a>
-
-              <a
                 href="#capabilities"
                 className="automation-button automation-button-secondary"
               >
                 Explore Capabilities
               </a>
+
             </div>
           </div>
 
@@ -214,11 +207,6 @@ export default function Automation() {
                   <h3>{capability.title}</h3>
 
                   <p>{capability.text}</p>
-
-                  <a href="#/contact">
-                    Discuss this capability
-                    <ArrowRight size={14} />
-                  </a>
                 </article>
               );
             })}
@@ -348,30 +336,14 @@ export default function Automation() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="automation-cta">
         <div className="container automation-cta-inner">
           <div>
-            <div className="automation-kicker">
-              HAVE A REPETITIVE PROCESS?
-            </div>
-
-            <h2>
-              Let's find what can
-              <span>be automated.</span>
-            </h2>
-
-            <p>
-              Show us the process, the systems involved and where
-              your team spends unnecessary time. We'll identify a
-              practical automation path.
-            </p>
+            <div className="automation-kicker">HAVE A REPETITIVE PROCESS?</div>
+            <h2>Let's find what can<span>be automated.</span></h2>
+            <p>Show us the process, the systems involved and where your team spends unnecessary time. We'll identify a practical automation path.</p>
           </div>
-
-          <a
-            href="#/contact"
-            className="automation-button automation-button-primary"
-          >
+          <a href="#/contact" className="automation-button automation-button-primary">
             Discuss Automation
             <ArrowRight size={17} />
           </a>

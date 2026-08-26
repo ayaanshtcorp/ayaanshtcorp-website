@@ -134,10 +134,6 @@ function ServiceCard({ service, dark = false }) {
         <p>{service.text}</p>
       </div>
 
-      <a href="#/contact">
-        Discuss a requirement
-        <ArrowRight size={15} />
-      </a>
     </article>
   );
 }
@@ -165,14 +161,6 @@ export default function WhatWeDo() {
             </p>
 
             <div className="solutions-hero-actions">
-              <a
-                href="#/contact"
-                className="solutions-button solutions-button-primary"
-              >
-                Start a Project
-                <ArrowRight size={16} />
-              </a>
-
               <a
                 href="#digital-solutions"
                 className="solutions-button solutions-button-secondary"
@@ -310,8 +298,7 @@ export default function WhatWeDo() {
 
           <div className="solutions-business-list">
             {businessServices.map((service, index) => (
-              <a
-                href="#/contact"
+              <div
                 className="solutions-business-row"
                 key={service.title}
               >
@@ -325,7 +312,7 @@ export default function WhatWeDo() {
                 </div>
 
                 <ArrowRight size={19} />
-              </a>
+              </div>
             ))}
           </div>
         </div>
@@ -380,31 +367,17 @@ export default function WhatWeDo() {
       <section className="solutions-cta">
         <div className="container solutions-cta-inner">
           <div>
-            <div className="solutions-kicker">
-              HAVE A REQUIREMENT?
-            </div>
-
-            <h2>
-              Let's determine the
-              <span>right way forward.</span>
-            </h2>
-
-            <p>
-              Tell us what you're trying to accomplish
-              and we'll discuss the most practical
-              approach.
-            </p>
+            <div className="solutions-kicker">HAVE A REQUIREMENT?</div>
+            <h2>Let's determine the<span>right way forward.</span></h2>
+            <p>Tell us what you're trying to accomplish and we'll discuss the most practical approach.</p>
           </div>
-
-          <a
-            href="#/contact"
-            className="solutions-button solutions-button-primary"
-          >
-            Start a Conversation
+          <a href="#/contact" className="solutions-button solutions-button-primary">
+            Discuss Your Project
             <ArrowRight size={17} />
           </a>
         </div>
       </section>
+
     </main>
   );
 }

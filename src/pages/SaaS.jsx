@@ -104,14 +104,6 @@ export default function SaaS() {
 
             <div className="saas-actions">
               <a
-                href="#/contact"
-                className="saas-button saas-button-primary"
-              >
-                Start a Project
-                <ArrowRight size={16} />
-              </a>
-
-              <a
                 href="#capabilities"
                 className="saas-button saas-button-secondary"
               >
@@ -211,11 +203,6 @@ export default function SaaS() {
                   <h3>{capability.title}</h3>
 
                   <p>{capability.text}</p>
-
-                  <a href="#/contact">
-                    Discuss this capability
-                    <ArrowRight size={14} />
-                  </a>
                 </article>
               );
             })}
@@ -342,30 +329,15 @@ export default function SaaS() {
         </div>
       </section>
 
-      {/* CTA */}
       <section className="saas-cta">
         <div className="container saas-cta-inner">
           <div>
-            <div className="saas-kicker">
-              HAVE A SOFTWARE IDEA?
-            </div>
-
-            <h2>
-              Let's turn the idea
-              <span>into a practical product.</span>
-            </h2>
-
-            <p>
-              Tell us what you want the software to accomplish
-              and we'll determine the most practical path forward.
-            </p>
+            <div className="saas-kicker">HAVE A SOFTWARE IDEA?</div>
+            <h2>Let's turn the idea<span>into a practical product.</span></h2>
+            <p>Tell us what you want the software to accomplish and we'll determine the most practical path forward.</p>
           </div>
-
-          <a
-            href="#/contact"
-            className="saas-button saas-button-primary"
-          >
-            Start a Conversation
+          <a href="#/contact" className="saas-button saas-button-primary">
+            Discuss Your SaaS
             <ArrowRight size={17} />
           </a>
         </div>

@@ -223,10 +223,6 @@ export default function CaseStudies() {
                     <p>{study.outcome}</p>
                   </div>
 
-                  <a href="#/contact" className="text-link">
-                    Discuss a similar requirement
-                    <ArrowRight size={16} />
-                  </a>
 
                 </div>
 
