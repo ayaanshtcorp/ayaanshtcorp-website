@@ -41,15 +41,45 @@ const initialForm = {
   phone: "",
   service: "",
   timeline: "",
+  budget: "",
   message: "",
   consent: false,
 };
+
+const fieldLimits = {
+  name: 100,
+  company: 150,
+  email: 254,
+  phone: 40,
+  service: 100,
+  timeline: 50,
+  budget: 80,
+  message: 5000,
+};
+
+function validateForm(form) {
+  const errors = {};
+  const values = { ...form };
+
+  Object.keys(fieldLimits).forEach((field) => {
+    values[field] = typeof values[field] === "string" ? values[field].trim() : values[field];
+    if (values[field].length > fieldLimits[field]) errors[field] = "This field is too long.";
+  });
+  if (!values.name) errors.name = "Please enter your name.";
+  if (!values.email || !/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i.test(values.email)) errors.email = "Please enter a valid business email.";
+  if (!values.service) errors.service = "Please select a service.";
+  if (!values.message || values.message.length < 20) errors.message = "Please describe the requirement in at least 20 characters.";
+  if (!values.consent) errors.consent = "Consent is required to submit this enquiry.";
+
+  return { errors, values };
+}
 
 export default function Contact() {
   const [form, setForm] = useState(initialForm);
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState({});
 
   const handleChange = (event) => {
     const { name, value, type, checked } = event.target;
@@ -62,18 +92,22 @@ export default function Contact() {
     if (error) {
       setError("");
     }
+    setFieldErrors((current) => ({ ...current, [name]: "" }));
   };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    if (!form.consent) {
-      setError("Please accept the privacy consent before submitting.");
+    const { errors, values } = validateForm(form);
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      setError("Please review the form and complete the highlighted fields.");
       return;
     }
 
     setSubmitting(true);
     setError("");
+    setFieldErrors({});
 
     try {
       const response = await fetch("/api/contact", {
@@ -81,24 +115,25 @@ export default function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(form),
+        body: JSON.stringify(values),
       });
 
-      const data = await response.json();
+      const data = await response.json().catch(() => ({}));
 
       if (!response.ok || !data.success) {
-        throw new Error(
-          data.message || "Unable to submit your enquiry."
-        );
+        const submitError = new Error(data.message || "Unable to submit your enquiry.");
+        submitError.kind = response.status === 429 ? "rate-limit" : "server";
+        throw submitError;
       }
 
       setSubmitted(true);
     } catch (submitError) {
-      console.error("Contact form submission failed:", submitError);
-
-      setError(
-        "We couldn't submit your enquiry right now. Please try again or email us directly at ayaanshtcorp@gmail.com."
-      );
+      console.error("Contact form submission failed", submitError.kind || "network");
+      setError(submitError.kind === "rate-limit"
+        ? "Too many attempts. Please wait a little before trying again."
+        : submitError.kind === "server"
+          ? "We couldn't process your enquiry right now. Please try again or email us directly at ayaanshtcorp@gmail.com."
+          : "We couldn't reach the enquiry service. Check your connection and try again, or email us directly at ayaanshtcorp@gmail.com.");
     } finally {
       setSubmitting(false);
     }
@@ -108,6 +143,7 @@ export default function Contact() {
     setForm(initialForm);
     setSubmitted(false);
     setError("");
+    setFieldErrors({});
   };
 
   return (
@@ -193,7 +229,8 @@ export default function Contact() {
                 <p>
                   We have captured your requirement. Our team will
                   review the information and get back to you with
-                  the appropriate next step.
+                  the appropriate next step. A confirmation email will
+                  be sent to the address you provided when available.
                 </p>
               </div>
 
@@ -228,7 +265,10 @@ export default function Contact() {
                     placeholder="Your full name"
                     autoComplete="name"
                     required
+                    maxLength={fieldLimits.name}
+                    aria-invalid={Boolean(fieldErrors.name)}
                   />
+                  {fieldErrors.name && <small className="field-error">{fieldErrors.name}</small>}
                 </div>
 
                 <div className="form-field">
@@ -244,6 +284,7 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="Company or organization"
                     autoComplete="organization"
+                    maxLength={fieldLimits.company}
                   />
                 </div>
 
@@ -261,7 +302,10 @@ export default function Contact() {
                     placeholder="you@company.com"
                     autoComplete="email"
                     required
+                    maxLength={fieldLimits.email}
+                    aria-invalid={Boolean(fieldErrors.email)}
                   />
+                  {fieldErrors.email && <small className="field-error">{fieldErrors.email}</small>}
                 </div>
 
                 <div className="form-field">
@@ -277,12 +321,13 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="+1 / +91"
                     autoComplete="tel"
+                    maxLength={fieldLimits.phone}
                   />
                 </div>
 
                 <div className="form-field">
                   <label htmlFor="service">
-                    Area of Interest <span>*</span>
+                    Service / Requirement <span>*</span>
                   </label>
 
                   <select
@@ -291,6 +336,7 @@ export default function Contact() {
                     value={form.service}
                     onChange={handleChange}
                     required
+                    aria-invalid={Boolean(fieldErrors.service)}
                   >
                     <option value="">
                       Select a service
@@ -298,30 +344,48 @@ export default function Contact() {
                     <option value="Web Development">
                       Web Development
                     </option>
-                    <option value="Mobile App Development">
-                      Mobile App Development
+                    <option value="Mobile Applications">
+                      Mobile Applications
                     </option>
-                    <option value="Digital Solutions">
-                      Digital Solutions
+                    <option value="SaaS">
+                      SaaS
                     </option>
-                    <option value="Cloud & Technical Services">
-                      Cloud & Technical Services
+                    <option value="Custom Software">
+                      Custom Software
                     </option>
                     <option value="Automation">
                       Automation
                     </option>
-                    <option value="Government Procurement Support">
-                      Government Procurement Support
+                    <option value="SEO & Digital Growth">
+                      SEO &amp; Digital Growth
                     </option>
-                    <option value="Business Services">
-                      Business Services
+                    <option value="RFQ Research">
+                      RFQ Research
+                    </option>
+                    <option value="Supplier Sourcing">
+                      Supplier Sourcing
+                    </option>
+                    <option value="Quote Support">
+                      Quote Support
                     </option>
                     <option value="Products & Ventures">
-                      Products & Ventures
+                      Products &amp; Ventures
                     </option>
-                    <option value="Other">
-                      Other
+                    <option value="General Enquiry">
+                      General Enquiry
                     </option>
+                  </select>
+                  {fieldErrors.service && <small className="field-error">{fieldErrors.service}</small>}
+                </div>
+
+                <div className="form-field">
+                  <label htmlFor="budget">Budget Range</label>
+                  <select id="budget" name="budget" value={form.budget} onChange={handleChange}>
+                    <option value="">Select budget range</option>
+                    <option value="To be discussed">To be discussed</option>
+                    <option value="Under 5,000">Under 5,000</option>
+                    <option value="5,000-25,000">5,000-25,000</option>
+                    <option value="25,000+">25,000+</option>
                   </select>
                 </div>
 
@@ -372,7 +436,10 @@ export default function Contact() {
                   placeholder="Tell us what you are trying to accomplish, what you need, and any important requirements or constraints."
                   rows="7"
                   required
+                  maxLength={fieldLimits.message}
+                  aria-invalid={Boolean(fieldErrors.message)}
                 />
+                {fieldErrors.message && <small className="field-error">{fieldErrors.message}</small>}
               </div>
 
               <label className="form-consent">
@@ -383,6 +450,7 @@ export default function Contact() {
                   checked={form.consent}
                   onChange={handleChange}
                   required
+                  aria-invalid={Boolean(fieldErrors.consent)}
                 />
 
                 <span>
@@ -395,6 +463,7 @@ export default function Contact() {
                 </span>
 
               </label>
+              {fieldErrors.consent && <small className="field-error consent-error">{fieldErrors.consent}</small>}
 
               {error && (
                 <div

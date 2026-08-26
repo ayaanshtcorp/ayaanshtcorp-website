@@ -1,0 +1,35 @@
+/* Contact form additions; layout styles remain in the existing global sheet. */
+.corporate-contact-form input:focus,
+.corporate-contact-form select:focus,
+.corporate-contact-form textarea:focus {
+	outline: 3px solid rgba(18, 100, 255, 0.22);
+	outline-offset: 1px;
+}
+
+.corporate-contact-form [aria-invalid="true"] {
+	border-color: var(--color-danger, #d92d20);
+}
+
+.field-error {
+	display: block;
+	margin-top: 6px;
+	color: var(--color-danger, #d92d20);
+	font-size: 13px;
+	line-height: 1.4;
+}
+
+.consent-error {
+	margin: -12px 0 16px;
+}
+
+@media (max-width: 640px) {
+	.form-submit-row {
+		align-items: flex-start;
+		flex-direction: column;
+	}
+
+	.form-submit-row .corporate-button {
+		width: 100%;
+		justify-content: center;
+	}
+}

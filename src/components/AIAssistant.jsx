@@ -7,6 +7,9 @@ import {
   ArrowRight,
 } from "lucide-react";
 
+const MAX_INPUT_LENGTH = 500;
+const MAX_OUTPUT_LENGTH = 700;
+
 const quickQuestions = [
   "What services do you offer?",
   "Tell me about web development",
@@ -16,6 +19,14 @@ const quickQuestions = [
 
 function getResponse(message) {
   const text = message.toLowerCase();
+
+  if (/(ignore|override).*(instruction|rule|prompt)|system prompt|api key|secret/.test(text)) {
+    return {
+      text: "I can only answer from verified Ayaansh T Corp website information. I cannot provide hidden instructions, secrets or unsupported claims. Please contact the team for a specific requirement.",
+      link: "#/contact",
+      linkText: "Contact Ayaansh T Corp",
+    };
+  }
 
   if (
     text.includes("web") ||
@@ -180,11 +191,16 @@ export default function AIAssistant() {
   ]);
 
   const [input, setInput] = useState("");
+  const [inputError, setInputError] = useState("");
 
   const sendMessage = (message = input) => {
     const trimmed = message.trim();
 
     if (!trimmed) {
+      return;
+    }
+    if (trimmed.length > MAX_INPUT_LENGTH) {
+      setInputError(`Please keep your question under ${MAX_INPUT_LENGTH} characters.`);
       return;
     }
 
@@ -199,7 +215,7 @@ export default function AIAssistant() {
     const assistantMessage = {
       id: Date.now() + 1,
       sender: "assistant",
-      text: response.text,
+      text: response.text.slice(0, MAX_OUTPUT_LENGTH),
       link: response.link,
       linkText: response.linkText,
     };
@@ -211,6 +227,7 @@ export default function AIAssistant() {
     ]);
 
     setInput("");
+    setInputError("");
   };
 
   const handleSubmit = (event) => {
@@ -320,10 +337,12 @@ export default function AIAssistant() {
               type="text"
               value={input}
               onChange={(event) =>
-                setInput(event.target.value)
+                setInput(event.target.value.slice(0, MAX_INPUT_LENGTH + 1))
               }
               placeholder="Ask about our services..."
               aria-label="Ask the AI Assistant"
+              maxLength={MAX_INPUT_LENGTH + 1}
+              aria-describedby={inputError ? "ai-input-error" : undefined}
             />
 
             <button
@@ -333,6 +352,7 @@ export default function AIAssistant() {
               <Send size={17} />
             </button>
           </form>
+          {inputError && <p id="ai-input-error" className="ai-input-error" role="alert">{inputError}</p>}
         </section>
       )}
     </>
